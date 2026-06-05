@@ -12,6 +12,12 @@ import { ChartManager } from './charts.js';
 import { SliderManager } from './slider.js';
 import { CookieManager } from './cookies.js';
 
+// Importar Vercel Analytics
+import { inject } from '@vercel/analytics';
+
+// Inicializar Vercel Analytics
+inject();
+
 document.addEventListener('DOMContentLoaded', () => {
   // Inicializar gestores
   ThemeManager.init();
