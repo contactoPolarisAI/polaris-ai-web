@@ -22,14 +22,14 @@
   <meta property="og:url" content="https://polaris-ai.es">
   <meta property="og:title" content="Polaris AI — IA empresarial local y privada para PYMEs">
   <meta property="og:description" content="Automatiza la gestión de facturas, pedidos por WhatsApp, inventarios e informes con IA ejecutada 100% local en tus servidores.">
-  <meta property="og:image" content="https://polaris-ai.es/logo.jpg">
+  <meta property="og:image" content="https://polaris-ai.es/og-image.jpg">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://polaris-ai.es">
   <meta property="twitter:title" content="Polaris AI — IA empresarial local y privada para PYMEs">
   <meta property="twitter:description" content="Automatiza tus tareas mecánicas con IA agéntica y local.">
-  <meta property="twitter:image" content="https://polaris-ai.es/logo.jpg">
+  <meta property="twitter:image" content="https://polaris-ai.es/og-image.jpg">
 
   <!-- Favicon -->
   <link rel="icon" type="image/jpg" href="./logo.jpg">
@@ -40,26 +40,32 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
   <!-- Marcado Estructurado JSON-LD (SEO) -->
+  <!-- Organization Schema (SEO/GEO) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
+    "@type": "Organization",
     "name": "Polaris AI",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Linux, Windows Server",
-    "offers": {
-      "@type": "Offer",
-      "price": "199",
-      "priceCurrency": "EUR"
-    },
-    "description": "IA agéntica local y privada instalada on-premise en tu empresa."
+    "url": "https://polaris-ai.es",
+    "logo": "https://polaris-ai.es/logo.jpg",
+    "telephone": "+34 602 02 58 77",
+    "email": "contacto@polaris-ai.es",
+    "areaServed": "ES",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Madrid",
+      "addressRegion": "Madrid",
+      "addressCountry": "ES"
+    }
   }
   </script>
+
+  <!-- LocalBusiness Schema (SEO/GEO) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Polaris AI España",
+    "name": "Polaris AI",
     "image": "https://polaris-ai.es/logo.jpg",
     "telephone": "+34 602 02 58 77",
     "email": "contacto@polaris-ai.es",
@@ -78,8 +84,113 @@
   }
   </script>
 
+  <!-- Product & Offers Schema (Beta rates) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Polaris AI",
+    "image": "https://polaris-ai.es/logo.jpg",
+    "description": "IA agéntica local y privada instalada on-premise en tu empresa.",
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "EUR",
+      "lowPrice": "249",
+      "highPrice": "649",
+      "offerCount": "3",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Beta Solo",
+          "price": "249",
+          "priceCurrency": "EUR",
+          "priceValidUntil": "2026-12-31",
+          "availability": "https://schema.org/InStock",
+          "url": "https://polaris-ai.es/#precios"
+        },
+        {
+          "@type": "Offer",
+          "name": "Beta Plus",
+          "price": "429",
+          "priceCurrency": "EUR",
+          "priceValidUntil": "2026-12-31",
+          "availability": "https://schema.org/InStock",
+          "url": "https://polaris-ai.es/#precios"
+        },
+        {
+          "@type": "Offer",
+          "name": "Beta Max",
+          "price": "649",
+          "priceCurrency": "EUR",
+          "priceValidUntil": "2026-12-31",
+          "availability": "https://schema.org/InStock",
+          "url": "https://polaris-ai.es/#precios"
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- FAQPage Schema (6 FAQs) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Realmente nada de mis datos sale de mi empresa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Correcto. Polaris AI se instala en hardware que vive en tu red — un servidor on-prem o una máquina virtual privada. Ni los prompts, ni los documentos, ni los resultados viajan a internet en ningún momento. Puedes auditar el tráfico de salida y comprobarlo tú mismo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "No tenemos equipo de IT. ¿Podemos hacerlo igualmente?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. El integrador certificado se encarga de instalación, configuración, formación y soporte continuo en España. En el plan Beta Plus típicamente la puesta en marcha completa toma 48 horas y la formación 2 sesiones de 1 hora."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué pasa cuando aparece un modelo mejor que el actual?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Te lo actualizamos. Tu hardware y tu corpus se mantienen; sólo cambia el motor. Forma parte de la licencia mensual sin coste adicional."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo se compara con ChatGPT Enterprise o Copilot 365?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A nivel capacidades brutas los tres son comparables hoy. La diferencia es de modelo de negocio y de riesgo: ChatGPT y Copilot cobran por token y procesan tus datos en sus servidores. Polaris AI tiene tarifa plana y vive en los tuyos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto cuesta el hardware? ¿Lo ponéis vosotros?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depende del tamaño de la empresa. Para 5–25 empleados un servidor adecuado ronda los 4.000–8.000€ (inversión única). Te acompañamos en la elección y compra; en el plan Beta Max podemos suministrarlo nosotros llave en mano."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Hay permanencia? ¿Cláusulas raras en el contrato?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ninguna. Mes a mes, cancelas cuando quieras. Si lo cancelas, tu hardware y tu corpus se quedan contigo: el software puede seguir corriendo en modo offline, sin actualizaciones."
+        }
+      }
+    ]
+  }
+  </script>
+
   <!-- Script principal de Vite -->
-  <script type="module" crossorigin src="./assets/main-CC5Rs0lk.js"></script>
+  <script type="module" crossorigin src="./assets/main-B1Eo3rx9.js"></script>
   <link rel="stylesheet" crossorigin href="./assets/main-DXfmlSzc.css">
 </head>
 <body data-screen-label="Polaris AI — Home">
@@ -462,7 +573,7 @@
       </div>
 
       <div class="sectors-grid">
-        <a class="sector-card card-sec-gestoria reveal" data-delay="1" href="https://wa.me/34602025877?text=Hola%20Polaris%20AI%2C%20me%20interesa%20la%20soluci%C3%B3n%20para%20Gestor%C3%ADas%20y%20Asesor%C3%ADas." target="_blank">
+        <a class="sector-card card-sec-gestoria reveal" data-delay="1" href="./sector-gestorias.html">
           <div class="sec-icon">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M16 13H8M16 17H8"></path></svg>
           </div>
@@ -477,7 +588,7 @@
           </div>
         </a>
 
-        <a class="sector-card card-sec-clinica reveal" data-delay="2" href="https://wa.me/34602025877?text=Hola%20Polaris%20AI%2C%20me%20interesa%20la%20soluci%C3%B3n%20para%20Cl%C3%ADnicas%20y%20Salud." target="_blank">
+        <a class="sector-card card-sec-clinica reveal" data-delay="2" href="./sector-clinicas.html">
           <div class="sec-icon">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v8M12 12v6M9 18h6"></path></svg>
           </div>
@@ -492,7 +603,7 @@
           </div>
         </a>
 
-        <a class="sector-card card-sec-despacho reveal" data-delay="3" href="https://wa.me/34602025877?text=Hola%20Polaris%20AI%2C%20me%20interesa%20la%20soluci%C3%B3n%20para%20Despachos%20Legales." target="_blank">
+        <a class="sector-card card-sec-despacho reveal" data-delay="3" href="./sector-despachos.html">
           <div class="sec-icon">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L4 6v6c0 5 4 9 8 10 4-1 8-5 8-10V6l-8-4z"></path><path d="M9 12l2 2 4-4"></path></svg>
           </div>
@@ -507,7 +618,7 @@
           </div>
         </a>
 
-        <a class="sector-card card-sec-logistica reveal" data-delay="4" href="https://wa.me/34602025877?text=Hola%20Polaris%20AI%2C%20me%20interesa%20la%20soluci%C3%B3n%20para%20Log%C3%ADstica%20y%20Distribuci%C3%B3n." target="_blank">
+        <a class="sector-card card-sec-logistica reveal" data-delay="4" href="./sector-logistica.html">
           <div class="sec-icon">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h13l5 5v5h-2M1 7v10h2"></path><circle cx="7" cy="17" r="2"></circle><circle cx="17" cy="17" r="2"></circle></svg>
           </div>
@@ -1046,7 +1157,7 @@
             </tr>
             <tr>
               <td>Coste por 15 usuarios/mes</td>
-              <td class="col-polaris">199 € fijo</td>
+              <td class="col-polaris">429 €/mes fijo (Beta Plus, hasta 12 usuarios)</td>
               <td class="neg">~450 € (30 €/user)</td>
               <td class="neg">~375 € (25 €/user)</td>
             </tr>
@@ -1137,17 +1248,17 @@
 
           <div class="roi-plan-title">Plan Polaris AI</div>
           <div class="roi-plans" role="radiogroup">
-            <button class="roi-plan" data-plan="essential" data-mensual="79" data-setup="800" type="button" role="radio">
-              <span class="plan-name">Essential Scout</span>
-              <span class="plan-meta">79 €/mes · setup 800 €</span>
+            <button class="roi-plan" data-plan="essential" data-mensual="249" data-setup="2000" type="button" role="radio">
+              <span class="plan-name">Beta Solo</span>
+              <span class="plan-meta">249 €/mes · setup 2.000 €</span>
             </button>
-            <button class="roi-plan active" data-plan="business" data-mensual="199" data-setup="1800" type="button" role="radio" aria-checked="true">
-              <span class="plan-name">Business Agent</span>
-              <span class="plan-meta">199 €/mes · setup 1.800 €</span>
+            <button class="roi-plan active" data-plan="business" data-mensual="429" data-setup="2000" type="button" role="radio" aria-checked="true">
+              <span class="plan-name">Beta Plus</span>
+              <span class="plan-meta">429 €/mes · setup 2.000 €</span>
             </button>
-            <button class="roi-plan" data-plan="enterprise" data-mensual="349" data-setup="3200" type="button" role="radio">
-              <span class="plan-name">Enterprise Guardian</span>
-              <span class="plan-meta">349 €/mes · setup 3.200 €</span>
+            <button class="roi-plan" data-plan="enterprise" data-mensual="649" data-setup="2000" type="button" role="radio">
+              <span class="plan-name">Beta Max</span>
+              <span class="plan-meta">649 €/mes · setup 2.000 €</span>
             </button>
           </div>
         </div>
@@ -1201,64 +1312,71 @@
         <p>Hardware + setup único + licencia mensual fija. Sin cuotas por consulta, sin cargos por usuario adicional dentro del plan. La diferencia con la nube se paga sola entre el primer y el cuarto mes.</p>
       </div>
 
+      <!-- Aviso de Temporalidad Beta -->
+      <div class="pricing-notice reveal" style="background: var(--accent-soft); border-left: 4px solid var(--accent-2); border-radius: 8px; padding: 18px 22px; font-size: 0.94rem; color: var(--fg); max-width: 800px; margin: 0 auto 32px; text-align: left; line-height: 1.6; box-shadow: var(--shadow-sm);">
+        <strong style="color: var(--accent); font-weight: 700;">Aviso de temporalidad Beta:</strong> Precios de fase Beta. Al cierre del programa Beta regirán las tarifas estándar. Los clientes que se incorporen durante la Beta conservan su precio de lanzamiento hasta la renovación de su contrato, condición que figurará en el contrato.
+      </div>
+
       <div class="pricing-grid">
         <article class="plan reveal" data-delay="1">
-          <span class="plan-name">Essential</span>
-          <p class="plan-desc">Para equipos de 5–10 personas que arrancan con un caso de uso clave.</p>
+          <span class="plan-name">Beta Solo</span>
+          <p class="plan-desc">Para equipos pequeños que inician la automatización local de tareas clave.</p>
           <div class="price">
-            <span class="amount">297€</span>
+            <span class="amount">249€</span>
             <span class="per">/ mes</span>
           </div>
-          <span class="setup">// setup único · 500–800€</span>
+          <span class="setup">// setup único · 2.000€</span>
           <ul>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> 1 caso de uso a medida</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Hasta 10 usuarios activos</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> RAG sobre 1 fuente documental</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Soporte estándar 8×5</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Hasta 4 usuarios simultáneos</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Hasta 5 usuarios registrados</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Facturas, WhatsApp y Excel</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Soporte por email 48h</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Formación 2h online</li>
           </ul>
-          <a href="https://wa.me/34602025877?text=Hola%20Polaris%20AI%2C%20me%20interesa%20el%20plan%20Essential%20de%20297%E2%82%AC%2Fmes." class="btn btn-secondary" target="_blank">Empezar con Essential</a>
+          <a href="https://wa.me/34602025877?text=Hola%20Polaris%20AI%2C%20me%20interesa%20el%20plan%20Beta%20Solo%20de%20249%E2%82%AC%2Fmes%20con%20setup%20de%202.000%E2%82%AC." class="btn btn-secondary" target="_blank">Hablar con el equipo</a>
         </article>
 
         <article class="plan popular reveal" data-delay="2">
           <span class="plan-tag">// más popular</span>
-          <span class="plan-name">Business</span>
-          <p class="plan-desc">El plan elegido por la mayoría de PYMEs de 10–25 empleados con varios procesos automatizables.</p>
+          <span class="plan-name">Beta Plus</span>
+          <p class="plan-desc">El plan recomendado para optimizar flujos de trabajo multi-departamento con aceleración eGPU.</p>
           <div class="price">
-            <span class="amount">597€</span>
+            <span class="amount">429€</span>
             <span class="per">/ mes</span>
           </div>
-          <span class="setup">// setup único · 800–1.000€ + 100€/empleado</span>
+          <span class="setup">// setup único · 2.000€</span>
           <ul>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> 3 casos de uso · WhatsApp incluido</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Hasta 25 usuarios activos</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> RAG multifuente · conectores ERP/CRM</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Plantillas de sector incluidas</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Soporte prioritario 12×5</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Hasta 8 simultáneos (eGPU)</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Hasta 12 registrados</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Todos los flujos multi-departamento</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Dashboard de actividad diario</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Soporte email 24h + remoto</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Formación 4h presencial</li>
           </ul>
-          <a href="https://wa.me/34602025877?text=Hola%20Polaris%20AI%2C%20me%20interesa%20el%20plan%20Business%20de%20597%E2%82%AC%2Fmes." class="btn btn-primary" target="_blank">Solicitar demo Business</a>
+          <a href="https://wa.me/34602025877?text=Hola%20Polaris%20AI%2C%20me%20interesa%20el%20plan%20Beta%20Plus%20de%20429%E2%82%AC%2Fmes%20con%20setup%20de%202.000%E2%82%AC." class="btn btn-primary" target="_blank">Solicitar acceso Beta</a>
         </article>
 
         <article class="plan reveal" data-delay="3">
-          <span class="plan-name">Enterprise</span>
-          <p class="plan-desc">Para organizaciones con cumplimiento reforzado y múltiples departamentos.</p>
+          <span class="plan-name">Beta Max</span>
+          <p class="plan-desc">Máxima potencia de hardware dedicada para grandes flujos de trabajo e integración total.</p>
           <div class="price">
-            <span class="amount">997€</span>
+            <span class="amount">649€</span>
             <span class="per">/ mes</span>
           </div>
-          <span class="setup">// setup único · 1.200€ + 150€/empleado</span>
+          <span class="setup">// setup único · 2.000€</span>
           <ul>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Casos de uso ilimitados</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Hasta 50 usuarios · multidepartamento</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Fine-tuning sobre tu corpus</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Auditoría RGPD · ISO 27001 trail</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Soporte dedicado 24×5 + SLA</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Hasta 10 simultáneos (RTX 3090)</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Registrados ilimitados</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Todos los flujos + custom + ERP</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> SLA 4h + soporte presencial</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Formación 8h</li>
           </ul>
-          <a href="https://wa.me/34602025877?text=Hola%20Polaris%20AI%2C%20quisi%C3%A9ramos%20solicitar%20informaci%C3%B3n%20sobre%20el%20plan%20Enterprise." class="btn btn-secondary" target="_blank">Hablar con ventas</a>
+          <a href="https://wa.me/34602025877?text=Hola%20Polaris%20AI%2C%20me%20interesa%20el%20plan%20Beta%20Max%20de%20649%E2%82%AC%2Fmes%20con%20setup%20de%202.000%E2%82%AC." class="btn btn-secondary" target="_blank">Hablar con el equipo</a>
         </article>
       </div>
 
       <p class="reveal" data-delay="4" style="text-align:center; margin-top:36px; font-family:'JetBrains Mono', monospace; font-size:0.78rem; letter-spacing:0.08em; color:var(--fg-muted);">
-        // calculadora de ROI disponible en <a href="#roi" style="color:var(--accent-2);">/roi</a> · sin permanencia · cancela cuando quieras
+        // Plazas limitadas durante la fase Beta · calculadora de ROI disponible abajo · sin permanencia · cancela cuando quieras
       </p>
     </div>
   </section>
@@ -1363,7 +1481,7 @@
           </div>
           <div class="faq-item">
             <button class="faq-q">No tenemos equipo de IT. ¿Podemos hacerlo igualmente?<span class="plus" aria-hidden="true">+</span></button>
-            <div class="faq-a">Sí. El integrador certificado se encarga de instalación, configuración, formación y soporte continuo en España. En el plan Business típicamente la puesta en marcha completa toma 48 horas y la formación 2 sesiones de 1 hora.</div>
+            <div class="faq-a">Sí. El integrador certificado se encarga de instalación, configuración, formación y soporte continuo en España. En el plan Beta Plus típicamente la puesta en marcha completa toma 48 horas y la formación 2 sesiones de 1 hora.</div>
           </div>
           <div class="faq-item">
             <button class="faq-q">¿Qué pasa cuando aparece un modelo mejor que el actual?<span class="plus" aria-hidden="true">+</span></button>
@@ -1375,7 +1493,7 @@
           </div>
           <div class="faq-item">
             <button class="faq-q">¿Cuánto cuesta el hardware? ¿Lo ponéis vosotros?<span class="plus" aria-hidden="true">+</span></button>
-            <div class="faq-a">Depende del tamaño de la empresa. Para 5–25 empleados un servidor adecuado ronda los 4.000–8.000€ (inversión única). Te acompañamos en la elección y compra; en planes Enterprise podemos suministrarlo nosotros llave en mano.</div>
+            <div class="faq-a">Depende del tamaño de la empresa. Para 5–25 empleados un servidor adecuado ronda los 4.000–8.000€ (inversión única). Te acompañamos en la elección y compra; en el plan Beta Max podemos suministrarlo nosotros llave en mano.</div>
           </div>
           <div class="faq-item">
             <button class="faq-q">¿Hay permanencia? ¿Cláusulas raras en el contrato?<span class="plus" aria-hidden="true">+</span></button>
@@ -1447,7 +1565,7 @@
       <span>
         <a href="./politica-privacidad.html">PRIVACIDAD</a> &nbsp;·&nbsp;
         <a href="./politica-cookies.html">COOKIES</a> &nbsp;·&nbsp;
-        <a href="#">TÉRMINOS</a>
+        <a href="./terminos.html">TÉRMINOS</a>
       </span>
     </div>
   </div>

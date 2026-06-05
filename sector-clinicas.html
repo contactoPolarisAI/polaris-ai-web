@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IA Local para Clínicas y Centros Médicos | Polaris AI</title>
+  <meta name="description" content="Automatiza la confirmación de citas por WhatsApp, la organización de historiales clínicos y la gestión interna con una IA local 100% privada que cumple el RGPD.">
+  <link rel="icon" type="image/jpg" href="./logo.jpg">
+  <link rel="canonical" href="https://polaris-ai.es/sector-clinicas.html">
+  <meta property="og:url" content="https://polaris-ai.es/sector-clinicas.html">
+  <meta property="og:image" content="https://polaris-ai.es/og-image.jpg">
+  <meta property="twitter:image" content="https://polaris-ai.es/og-image.jpg">
+  
+  <!-- Estilos compartidos -->
+  <link rel="stylesheet" href="./src/styles/variables.css">
+  <link rel="stylesheet" href="./src/styles/base.css">
+  <link rel="stylesheet" href="./src/styles/components.css">
+  <link rel="stylesheet" href="./src/styles/layouts.css">
+  
+  <style>
+    .sector-content {
+      padding: 64px 0 96px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .sector-content h1 {
+      margin-bottom: 16px;
+      font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+      line-height: 1.15;
+    }
+    .sector-subtitle {
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      color: var(--fg-muted);
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 32px;
+      font-size: 0.94rem;
+      transition: color 0.2s ease;
+    }
+    .btn-back:hover {
+      color: var(--accent-2);
+    }
+    
+    /* Adaptar navbar simple */
+    .nav-simple {
+      border-bottom: 1px solid var(--border);
+      background: rgba(255,255,255,.8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    body.theme-dark .nav-simple {
+      background: rgba(11,27,54,.8);
+    }
+
+    /* Grid de características del sector */
+    .sector-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin: 48px 0;
+    }
+    @media (max-width: 680px) {
+      .sector-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+    .sector-feat-card {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .sector-feat-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+    .sector-feat-card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--fg-muted);
+      margin: 0;
+    }
+
+    /* CTA Box */
+    .sector-cta-box {
+      background: var(--accent-soft);
+      border: 1px solid rgba(46,117,182,.2);
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+      margin-top: 56px;
+    }
+    .sector-cta-box h2 {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+      color: var(--accent);
+    }
+    .sector-cta-box p {
+      max-width: 600px;
+      margin: 0 auto 28px;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--fg-muted);
+    }
+  </style>
+
+  <!-- FAQPage JSON-LD (SEO/GEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cómo cumple Polaris AI con el Artículo 9 del RGPD?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El Artículo 9 prohíbe tratar datos de salud a menos que se apliquen medidas de seguridad muy estrictas. Al funcionar 100% on-premise en tu propia red local de la clínica, Polaris AI garantiza de manera nativa que ningún historial clínico se transmita fuera, cumpliendo estrictamente con la ley por diseño."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué funciones clínicas realiza la IA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Realiza indexación inteligente de informes médicos para búsquedas internas, digitalización automatizada de consentimientos firmados y confirmación/recordatorio de citas de pacientes por WhatsApp de forma offline y segura."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Se integra con los sistemas de gestión de la clínica (PMS)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Los integradores certificados conectan el agente local con la base de datos de tu software de gestión clínica local para sincronizar pacientes y agendas en tiempo real."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav nav-simple" id="nav">
+    <div class="container nav-inner">
+      <a href="./index.html" class="brand" aria-label="Polaris AI inicio">
+        <span class="logo-mark"><img src="./logo.jpg" alt="Polaris AI Logo"></span>
+        <span class="brand-name">
+          <span class="name">Polaris AI</span>
+          <span class="tag">Agentic · Local · Private</span>
+        </span>
+      </a>
+      <div class="nav-cta">
+        <a href="./index.html" class="btn btn-secondary btn-sm">Volver al inicio</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ CONTENIDO DEL SECTOR ============ -->
+  <main class="container">
+    <div class="sector-content">
+      <a href="./index.html" class="btn-back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Volver a la Home
+      </a>
+      
+      <span class="eyebrow" style="margin-bottom: 12px; display: inline-block;">// PLANTILLA SECTORIAL</span>
+      <h1>IA local para clínicas y centros médicos</h1>
+      <p class="sector-subtitle">Automatiza recordatorios de citas por WhatsApp, gestiona historiales médicos y partes de consentimiento clínico con una IA on-premise local y privada que cumple rigurosamente el RGPD.</p>
+      
+      <h2>Privacidad absoluta para datos médicos sensibles</h2>
+      <p>Los centros médicos y clínicas dentales manejan diariamente información clínica que pertenece a las categorías especiales de datos protegidas de forma reforzada por el Reglamento General de Protección de Datos (RGPD) en su Artículo 9. Utilizar chatbots u otras herramientas de inteligencia artificial conectadas a internet (en la nube) expone al centro médico a sanciones de la AEPD e infringe el deber de confidencialidad.</p>
+      
+      <p>Con **Polaris AI**, toda la computación y análisis de los datos clínicos se realiza en un servidor local físico, dentro de tus propias instalaciones. La información sensible de salud jamás viaja por internet, proporcionando una barrera de seguridad infranqueable.</p>
+
+      <div class="sector-grid">
+        <div class="sector-feat-card">
+          <h3>Recordatorio de citas por WhatsApp</h3>
+          <p>Un agente inteligente lee la agenda local del centro médico y envía de forma proactiva mensajes de WhatsApp a los pacientes para recordar o confirmar su cita, coordinando la agenda del centro automáticamente sin intermediación de nubes externas.</p>
+        </div>
+        <div class="sector-feat-card">
+          <h3>Indexación de historiales clínicos</h3>
+          <p>Los doctores pueden realizar búsquedas semánticas sobre el corpus de informes y pruebas diagnósticas de pacientes para encontrar precedentes clínicos y síntomas específicos al instante, manteniendo el anonimato y la privacidad del paciente.</p>
+        </div>
+        <div class="sector-feat-card">
+          <h3>Digitalización y archivo de consentimientos</h3>
+          <p>Extrae de forma automática firmas, datos personales y fechas de los partes de consentimiento firmado digitalmente o escaneados en papel, ordenando la documentación legal obligatoria en la ficha interna del paciente.</p>
+        </div>
+        <div class="sector-feat-card">
+          <h3>Cumplimiento estricto del Artículo 9</h3>
+          <p>Al no existir transferencia internacional de datos a APIs de terceros ubicadas fuera de la Unión Europea, tu clínica cuenta con la garantía jurídica total que exige el reglamento sanitario.</p>
+        </div>
+      </div>
+
+      <h2>Un sistema que optimiza la recepción</h2>
+      <p>Implementar Polaris AI libera tiempo valioso del personal de recepción. Las consultas recurrentes sobre horarios, recordatorios de preparación médica antes de una prueba o el proceso de primera cita son atendidos de manera fluida y adaptada por la IA a través del número oficial de la clínica, permitiendo a los auxiliares centrarse en la atención del paciente presencial.</p>
+
+      <div class="sector-cta-box">
+        <h2>¿Quieres ver cómo funciona con un caso clínico de prueba?</h2>
+        <p>Agenda una demostración virtual de 30 minutos. Te mostraremos cómo configuramos el agente local de Polaris AI para procesar e indexar historiales en un entorno de red desconectado y seguro.</p>
+        <a href="https://wa.me/34602025877?text=Hola%20Polaris%20AI%2C%20me%20gustar%C3%ADa%20solicitar%20una%20demo%20de%20la%20plantilla%20para%20Cl%C3%ADnicas%20y%20Centros%20M%C3%A9dicos." class="btn btn-primary" target="_blank">
+          Solicitar Demo de Clínicas por WhatsApp
+          <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="background: var(--polaris-navy-deep); color: rgba(255,255,255,.7); padding: 48px 0 24px; font-size: 0.92rem;">
+    <div class="container">
+      <div class="footer-bottom" style="display:flex; justify-content:space-between; align-items:center; border-top: 1px solid rgba(255,255,255,.1); padding-top:22px; font-family:'JetBrains Mono', monospace; font-size:0.72rem; color: rgba(255,255,255,.45);">
+        <span>© 2026 POLARIS AI · TODOS LOS DERECHOS RESERVADOS</span>
+        <span>
+          <a href="./politica-privacidad.html" style="color:rgba(255,255,255,.7)">PRIVACIDAD</a> &nbsp;·&nbsp;
+          <a href="./politica-cookies.html" style="color:rgba(255,255,255,.7)">COOKIES</a> &nbsp;·&nbsp;
+          <a href="./terminos.html" style="color:rgba(255,255,255,.7)">TÉRMINOS</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./src/js/main.js"></script>
+</body>
+</html>

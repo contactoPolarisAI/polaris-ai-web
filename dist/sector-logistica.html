@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IA Local para Logística y Distribución | Polaris AI</title>
+  <meta name="description" content="Automatiza el procesamiento de albaranes, la recepción de pedidos por WhatsApp y la integración con tu ERP local sin errores. IA local y offline.">
+  <link rel="icon" type="image/jpg" href="./logo.jpg">
+  <link rel="canonical" href="https://polaris-ai.es/sector-logistica.html">
+  <meta property="og:url" content="https://polaris-ai.es/sector-logistica.html">
+  <meta property="og:image" content="https://polaris-ai.es/og-image.jpg">
+  <meta property="twitter:image" content="https://polaris-ai.es/og-image.jpg">
+  
+  <!-- Estilos compartidos -->
+  
+  <style>
+    .sector-content {
+      padding: 64px 0 96px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .sector-content h1 {
+      margin-bottom: 16px;
+      font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+      line-height: 1.15;
+    }
+    .sector-subtitle {
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      color: var(--fg-muted);
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 32px;
+      font-size: 0.94rem;
+      transition: color 0.2s ease;
+    }
+    .btn-back:hover {
+      color: var(--accent-2);
+    }
+    
+    /* Adaptar navbar simple */
+    .nav-simple {
+      border-bottom: 1px solid var(--border);
+      background: rgba(255,255,255,.8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    body.theme-dark .nav-simple {
+      background: rgba(11,27,54,.8);
+    }
+
+    /* Grid de características del sector */
+    .sector-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin: 48px 0;
+    }
+    @media (max-width: 680px) {
+      .sector-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+    .sector-feat-card {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .sector-feat-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+    .sector-feat-card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--fg-muted);
+      margin: 0;
+    }
+
+    /* CTA Box */
+    .sector-cta-box {
+      background: var(--accent-soft);
+      border: 1px solid rgba(46,117,182,.2);
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+      margin-top: 56px;
+    }
+    .sector-cta-box h2 {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+      color: var(--accent);
+    }
+    .sector-cta-box p {
+      max-width: 600px;
+      margin: 0 auto 28px;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--fg-muted);
+    }
+  </style>
+
+  <!-- FAQPage JSON-LD (SEO/GEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cómo procesa albaranes con formatos variables?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Polaris AI utiliza su motor reflexivo local. En lugar de depender de coordenadas de posición fijas, comprende el significado semántico del albarán para extraer referencias, cantidades y descripciones de forma inteligente de cualquier proveedor."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo se integra con los ERPs existentes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Se integra directamente con tu base de datos local o mediante conectores automáticos que exportan en CSV o JSON listos para tu ERP (como SAP local, Dynamics, Sage o desarrollos a medida)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Puede procesar pedidos automáticos desde chats de WhatsApp?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. El agente local recibe el mensaje o imagen del pedido del cliente, analiza los productos solicitados y los pre-carga de forma directa en tu sistema local para que el almacén los prepare."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="module" crossorigin src="./assets/main-B1Eo3rx9.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-DXfmlSzc.css">
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav nav-simple" id="nav">
+    <div class="container nav-inner">
+      <a href="./index.html" class="brand" aria-label="Polaris AI inicio">
+        <span class="logo-mark"><img src="./logo.jpg" alt="Polaris AI Logo"></span>
+        <span class="brand-name">
+          <span class="name">Polaris AI</span>
+          <span class="tag">Agentic · Local · Private</span>
+        </span>
+      </a>
+      <div class="nav-cta">
+        <a href="./index.html" class="btn btn-secondary btn-sm">Volver al inicio</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ CONTENIDO DEL SECTOR ============ -->
+  <main class="container">
+    <div class="sector-content">
+      <a href="./index.html" class="btn-back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Volver a la Home
+      </a>
+      
+      <span class="eyebrow" style="margin-bottom: 12px; display: inline-block;">// PLANTILLA SECTORIAL</span>
+      <h1>IA local para logística y distribución</h1>
+      <p class="sector-subtitle">Automatiza la extracción de albaranes de entrega, la recepción de pedidos comerciales por WhatsApp y su entrada en el ERP local sin errores manuales.</p>
+      
+      <h2>Velocidad y control en la cadena de distribución</h2>
+      <p>En el sector de la distribución y la logística, los cuellos de botella se producen a menudo en la administración del almacén: registrar manualmente los albaranes de recepción, transcribir los pedidos variables que llegan por email o chats de clientes y picar datos en el ERP. Realizar esto de forma manual provoca retrasos en la expedición y costosos errores de inventario.</p>
+      
+      <p>La solución de **Polaris AI** permite automatizar estas tareas operativas mediante un agente de IA que corre localmente en tus instalaciones, protegiendo tus datos logísticos internos y asegurando el funcionamiento continuo del almacén, incluso si hay cortes en la conexión a internet.</p>
+
+      <div class="sector-grid">
+        <div class="sector-feat-card">
+          <h3>Procesamiento inteligente de albaranes</h3>
+          <p>Extrae de forma automática referencias de producto, números de lote, cantidades recibidas y fechas de entrega de albaranes en PDF o escaneos fotográficos, cruzándolos con tus órdenes de compra.</p>
+        </div>
+        <div class="sector-feat-card">
+          <h3>Pedidos de WhatsApp directos al ERP</h3>
+          <p>Un agente inteligente recibe los audios, textos o fotos de pedidos de tus clientes habituales por WhatsApp y carga la orden lista para validar en tu ERP local, agilizando la preparación de los bultos.</p>
+        </div>
+        <div class="sector-feat-card">
+          <h3>Sincronización con bases de datos locales</h3>
+          <p>El sistema se comunica con bases de datos locales (SQL Server, MySQL, etc.) para mantener actualizado el inventario en tiempo real sin requerir APIs web externas ni licencias en la nube.</p>
+        </div>
+        <div class="sector-feat-card">
+          <h3>Tolerancia a fallos de red</h3>
+          <p>Al funcionar el motor de inteligencia artificial en local, la entrada de datos en almacén no se detiene si internet se cae. Tu operativa logística sigue activa de manera autónoma.</p>
+        </div>
+      </div>
+
+      <h2>Reduce el tiempo de transcripción en un 85%</h2>
+      <p>Los integradores certificados de Polaris AI configuran el agente local para conectarse directamente a tus carpetas de almacén o correos corporativos. En cuanto un transportista o proveedor entrega la mercancía, la IA la clasifica e introduce los datos en el sistema. Los operarios de almacén solo tienen que revisar la mercancía física y pulsar un botón de confirmación en su terminal local.</p>
+
+      <div class="sector-cta-box">
+        <h2>¿Quieres optimizar el almacén de tu distribuidora?</h2>
+        <p>Reserva tu demostración técnica de 30 minutos por WhatsApp. Analizaremos tus albaranes reales y diseñaremos una arquitectura de servidor adecuada para las necesidades de tu empresa.</p>
+        <a href="https://wa.me/34602025877?text=Hola%20Polaris%20AI%2C%20me%20gustar%C3%ADa%20solicitar%20una%20demo%20de%20la%20plantilla%20para%20Log%C3%ADstica%20y%20Distribuci%C3%B3n." class="btn btn-primary" target="_blank">
+          Solicitar Demo de Logística por WhatsApp
+          <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="background: var(--polaris-navy-deep); color: rgba(255,255,255,.7); padding: 48px 0 24px; font-size: 0.92rem;">
+    <div class="container">
+      <div class="footer-bottom" style="display:flex; justify-content:space-between; align-items:center; border-top: 1px solid rgba(255,255,255,.1); padding-top:22px; font-family:'JetBrains Mono', monospace; font-size:0.72rem; color: rgba(255,255,255,.45);">
+        <span>© 2026 POLARIS AI · TODOS LOS DERECHOS RESERVADOS</span>
+        <span>
+          <a href="./politica-privacidad.html" style="color:rgba(255,255,255,.7)">PRIVACIDAD</a> &nbsp;·&nbsp;
+          <a href="./politica-cookies.html" style="color:rgba(255,255,255,.7)">COOKIES</a> &nbsp;·&nbsp;
+          <a href="./terminos.html" style="color:rgba(255,255,255,.7)">TÉRMINOS</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

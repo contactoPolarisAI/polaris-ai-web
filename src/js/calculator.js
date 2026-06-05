@@ -10,7 +10,7 @@ export const RoiCalculator = {
       auto:      { el: document.getElementById('roi-auto'),     vEl: document.getElementById('roi-auto-v') }
     };
 
-    this.plan = { mensual: 199, setup: 1800, name: 'Business Agent' };
+    this.plan = { mensual: 429, setup: 2000, name: 'Beta Plus' };
 
     // Agregar listeners a los inputs
     Object.values(this.fields).forEach(f => {

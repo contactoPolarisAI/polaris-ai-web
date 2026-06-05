@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IA Local para Gestorías y Asesorías Fiscales | Polaris AI</title>
+  <meta name="description" content="Optimiza el procesamiento de facturas, la contabilidad y la comunicación con tus clientes mediante IA local y privada on-premise. Cumplimiento RGPD nativo.">
+  <link rel="icon" type="image/jpg" href="./logo.jpg">
+  <link rel="canonical" href="https://polaris-ai.es/sector-gestorias.html">
+  <meta property="og:url" content="https://polaris-ai.es/sector-gestorias.html">
+  <meta property="og:image" content="https://polaris-ai.es/og-image.jpg">
+  <meta property="twitter:image" content="https://polaris-ai.es/og-image.jpg">
+  
+  <!-- Estilos compartidos -->
+  <link rel="stylesheet" href="./src/styles/variables.css">
+  <link rel="stylesheet" href="./src/styles/base.css">
+  <link rel="stylesheet" href="./src/styles/components.css">
+  <link rel="stylesheet" href="./src/styles/layouts.css">
+  
+  <style>
+    .sector-content {
+      padding: 64px 0 96px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .sector-content h1 {
+      margin-bottom: 16px;
+      font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+      line-height: 1.15;
+    }
+    .sector-subtitle {
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      color: var(--fg-muted);
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 32px;
+      font-size: 0.94rem;
+      transition: color 0.2s ease;
+    }
+    .btn-back:hover {
+      color: var(--accent-2);
+    }
+    
+    /* Adaptar navbar simple */
+    .nav-simple {
+      border-bottom: 1px solid var(--border);
+      background: rgba(255,255,255,.8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    body.theme-dark .nav-simple {
+      background: rgba(11,27,54,.8);
+    }
+
+    /* Grid de características del sector */
+    .sector-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin: 48px 0;
+    }
+    @media (max-width: 680px) {
+      .sector-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+    .sector-feat-card {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .sector-feat-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+    .sector-feat-card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--fg-muted);
+      margin: 0;
+    }
+
+    /* CTA Box */
+    .sector-cta-box {
+      background: var(--accent-soft);
+      border: 1px solid rgba(46,117,182,.2);
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+      margin-top: 56px;
+    }
+    .sector-cta-box h2 {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+      color: var(--accent);
+    }
+    .sector-cta-box p {
+      max-width: 600px;
+      margin: 0 auto 28px;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--fg-muted);
+    }
+  </style>
+
+  <!-- FAQPage JSON-LD (SEO/GEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cómo se integra con Sage, A3 u otros programas locales?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Polaris AI extrae la información con gran precisión y exporta los datos directamente a tu software existente en formatos compatibles (Excel, CSV o APIs locales) listos para importar sin modificar tu flujo de trabajo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Es seguro para cumplir con el secreto profesional de la gestoría?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Completamente. Al instalarse on-premise en tu propia oficina o red privada virtual, ningún dato de tus clientes sale a internet, lo cual garantiza de manera nativa el secreto profesional y el estricto cumplimiento del RGPD."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué hardware requiere la gestoría para empezar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Para gestorías pequeñas y medianas (hasta 12 usuarios), basta con un servidor local equipado con una GPU básica (eGPU) con una inversión única y amortizable en pocos meses."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav nav-simple" id="nav">
+    <div class="container nav-inner">
+      <a href="./index.html" class="brand" aria-label="Polaris AI inicio">
+        <span class="logo-mark"><img src="./logo.jpg" alt="Polaris AI Logo"></span>
+        <span class="brand-name">
+          <span class="name">Polaris AI</span>
+          <span class="tag">Agentic · Local · Private</span>
+        </span>
+      </a>
+      <div class="nav-cta">
+        <a href="./index.html" class="btn btn-secondary btn-sm">Volver al inicio</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ CONTENIDO DEL SECTOR ============ -->
+  <main class="container">
+    <div class="sector-content">
+      <a href="./index.html" class="btn-back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Volver a la Home
+      </a>
+      
+      <span class="eyebrow" style="margin-bottom: 12px; display: inline-block;">// PLANTILLA SECTORIAL</span>
+      <h1>IA local para gestorías y asesorías fiscales</h1>
+      <p class="sector-subtitle">Procesa miles de facturas mensuales, gestiona modelos tributarios y atiende a tus clientes sin comprometer el secreto profesional ni subir un solo dato confidencial a la nube.</p>
+      
+      <h2>El reto de la asesoría moderna frente a la privacidad</h2>
+      <p>Las gestorías y asesorías manejan el corpus documental más crítico de las empresas españolas: nóminas, balances, facturas de gastos y escrituras. Utilizar herramientas de inteligencia artificial basadas en la nube para procesar esta información implica un riesgo inaceptable de fugas de datos y un potencial incumplimiento del RGPD.</p>
+      
+      <p>Polaris AI ofrece la solución definitiva: **Inteligencia Artificial agéntica instalada on-premise en tu propia oficina**. Los modelos de IA extraen, procesan y ordenan la información de manera local, garantizando que los datos de tus clientes nunca salgan de tu red física.</p>
+
+      <div class="sector-grid">
+        <div class="sector-feat-card">
+          <h3>Procesamiento masivo de facturas</h3>
+          <p>Extrae de forma automática bases imponibles, IVAs, retenciones e información de proveedores de miles de PDFs de facturas digitales y escaneadas en segundos, eliminando la transcripción manual por completo.</p>
+        </div>
+        <div class="sector-feat-card">
+          <h3>Integración con A3 y Sage</h3>
+          <p>Los datos extraídos se convierten automáticamente a archivos de entrada listos para tus sistemas de contabilidad local como Sage o A3, evitando cuellos de botella al cierre de cada trimestre fiscal.</p>
+        </div>
+        <div class="sector-feat-card">
+          <h3>Atención al cliente vía WhatsApp</h3>
+          <p>Un agente inteligente local atiende las dudas de tus clientes sobre plazos, documentación requerida y envío de archivos de manera offline, mejorando los tiempos de respuesta de tu equipo.</p>
+        </div>
+        <div class="sector-feat-card">
+          <h3>Cumplimiento normativo y secreto</h3>
+          <p>Cumple con el secreto profesional por diseño. Al procesarse toda la documentación dentro de tu red, superas con creces cualquier auditoría de protección de datos de la AEPD.</p>
+        </div>
+      </div>
+
+      <h2>Automatización inteligente y reflexiva</h2>
+      <p>Gracias a su **Módulo Reflexivo** nativo, el nodo local de Polaris AI no requiere plantillas fijas para cada proveedor. La IA entiende el significado de cada documento de gastos e ingresos de forma similar a como lo haría un contable experto, adaptándose a variaciones y formatos diversos automáticamente y mejorando de forma continua con la interacción del gestor.</p>
+
+      <div class="sector-cta-box">
+        <h2>¿Quieres ver cómo funciona con tus facturas?</h2>
+        <p>Agenda una demostración privada de 30 minutos. Trae tus propios PDFs de prueba y te mostraremos en tiempo real cómo Polaris extrae y procesa los datos sin conectarse a internet.</p>
+        <a href="https://wa.me/34602025877?text=Hola%20Polaris%20AI%2C%20me%20gustar%C3%ADa%20solicitar%20una%20demo%20de%20la%20plantilla%20para%20Gestor%C3%ADas%20y%20Asesor%C3%ADas." class="btn btn-primary" target="_blank">
+          Solicitar Demo de Gestorías por WhatsApp
+          <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="background: var(--polaris-navy-deep); color: rgba(255,255,255,.7); padding: 48px 0 24px; font-size: 0.92rem;">
+    <div class="container">
+      <div class="footer-bottom" style="display:flex; justify-content:space-between; align-items:center; border-top: 1px solid rgba(255,255,255,.1); padding-top:22px; font-family:'JetBrains Mono', monospace; font-size:0.72rem; color: rgba(255,255,255,.45);">
+        <span>© 2026 POLARIS AI · TODOS LOS DERECHOS RESERVADOS</span>
+        <span>
+          <a href="./politica-privacidad.html" style="color:rgba(255,255,255,.7)">PRIVACIDAD</a> &nbsp;·&nbsp;
+          <a href="./politica-cookies.html" style="color:rgba(255,255,255,.7)">COOKIES</a> &nbsp;·&nbsp;
+          <a href="./terminos.html" style="color:rgba(255,255,255,.7)">TÉRMINOS</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./src/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IA Local para Despachos de Abogados y Asesorías Jurídicas | Polaris AI</title>
+  <meta name="description" content="Analiza sumarios judiciales, redacta borradores y busca jurisprudencia interna con una IA local 100% offline. Secreto profesional e inmunidad a filtraciones.">
+  <link rel="icon" type="image/jpg" href="./logo.jpg">
+  <link rel="canonical" href="https://polaris-ai.es/sector-despachos.html">
+  <meta property="og:url" content="https://polaris-ai.es/sector-despachos.html">
+  <meta property="og:image" content="https://polaris-ai.es/og-image.jpg">
+  <meta property="twitter:image" content="https://polaris-ai.es/og-image.jpg">
+  
+  <!-- Estilos compartidos -->
+  <link rel="stylesheet" href="./src/styles/variables.css">
+  <link rel="stylesheet" href="./src/styles/base.css">
+  <link rel="stylesheet" href="./src/styles/components.css">
+  <link rel="stylesheet" href="./src/styles/layouts.css">
+  
+  <style>
+    .sector-content {
+      padding: 64px 0 96px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .sector-content h1 {
+      margin-bottom: 16px;
+      font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+      line-height: 1.15;
+    }
+    .sector-subtitle {
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      color: var(--fg-muted);
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 32px;
+      font-size: 0.94rem;
+      transition: color 0.2s ease;
+    }
+    .btn-back:hover {
+      color: var(--accent-2);
+    }
+    
+    /* Adaptar navbar simple */
+    .nav-simple {
+      border-bottom: 1px solid var(--border);
+      background: rgba(255,255,255,.8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    body.theme-dark .nav-simple {
+      background: rgba(11,27,54,.8);
+    }
+
+    /* Grid de características del sector */
+    .sector-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin: 48px 0;
+    }
+    @media (max-width: 680px) {
+      .sector-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+    .sector-feat-card {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .sector-feat-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+    .sector-feat-card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--fg-muted);
+      margin: 0;
+    }
+
+    /* CTA Box */
+    .sector-cta-box {
+      background: var(--accent-soft);
+      border: 1px solid rgba(46,117,182,.2);
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+      margin-top: 56px;
+    }
+    .sector-cta-box h2 {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+      color: var(--accent);
+    }
+    .sector-cta-box p {
+      max-width: 600px;
+      margin: 0 auto 28px;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--fg-muted);
+    }
+  </style>
+
+  <!-- FAQPage JSON-LD (SEO/GEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cómo garantiza Polaris AI el secreto profesional en el despacho?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "De manera nativa. Toda la indexación de sumarios judiciales, contratos y archivos históricos de jurisprudencia se realiza de forma local en tu red de servidores. Al no transferir documentos al exterior, el secreto profesional e inmunidad a filtraciones es del 100%."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué volumen de documentación jurídica puede indexar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Polaris AI puede procesar y almacenar millones de páginas de texto en formato PDF, Word y escaneos. Dependiendo de los discos SSD locales de tu hardware, permite realizar búsquedas complejas en milisegundos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Puede redactar contratos o demandas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Puede generar borradores, resumir sumarios de miles de páginas identificando contradicciones y fechas clave, y auditar contratos buscando cláusulas abusivas basándose en tus pautas."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav nav-simple" id="nav">
+    <div class="container nav-inner">
+      <a href="./index.html" class="brand" aria-label="Polaris AI inicio">
+        <span class="logo-mark"><img src="./logo.jpg" alt="Polaris AI Logo"></span>
+        <span class="brand-name">
+          <span class="name">Polaris AI</span>
+          <span class="tag">Agentic · Local · Private</span>
+        </span>
+      </a>
+      <div class="nav-cta">
+        <a href="./index.html" class="btn btn-secondary btn-sm">Volver al inicio</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ CONTENIDO DEL SECTOR ============ -->
+  <main class="container">
+    <div class="sector-content">
+      <a href="./index.html" class="btn-back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Volver a la Home
+      </a>
+      
+      <span class="eyebrow" style="margin-bottom: 12px; display: inline-block;">// PLANTILLA SECTORIAL</span>
+      <h1>IA local para despachos de abogados y asesorías jurídicas</h1>
+      <p class="sector-subtitle">Analiza sumarios judiciales de miles de páginas, redacta contratos y busca jurisprudencia interna de forma 100% local, protegiendo la confidencialidad de tus clientes.</p>
+      
+      <h2>Protección frente a la transferencia internacional de datos</h2>
+      <p>El ejercicio del derecho exige un estricto deber de sigilo y secreto profesional. Subir sumarios, contratos de fusiones, testamentos u otros documentos legales a sistemas de inteligencia artificial en la nube (como ChatGPT de OpenAI o Copilot de Microsoft) constituye una vulneración de dicho secreto, al transferir datos confidenciales a servidores externos y fuera del control del despacho.</p>
+      
+      <p>La alternativa segura es **Polaris AI**. Instala tu propio nodo de computación en tus oficinas. Toda la información es leída, analizada y procesada en local, permitiendo a los abogados utilizar toda la potencia de los LLMs modernos de forma totalmente privada e inmune a filtraciones de internet.</p>
+
+      <div class="sector-grid">
+        <div class="sector-feat-card">
+          <h3>Búsqueda semántica en el histórico</h3>
+          <p>Indexa en segundos todo el histórico de casos, demandas y sentencias del despacho. Encuentra argumentos jurídicos y jurisprudencia interna buscando de forma conceptual, no solo por palabras clave.</p>
+        </div>
+        <div class="sector-feat-card">
+          <h3>Análisis masivo de sumarios</h3>
+          <p>Sube expedientes judiciales complejos con miles de folios y obtén resúmenes ejecutivos detallados, cronología de los hechos y detección de contradicciones en declaraciones de forma instantánea.</p>
+        </div>
+        <div class="sector-feat-card">
+          <h3>Borradores y redacción jurídica</h3>
+          <p>Redacta borradores de contratos, contestaciones a demandas y cláusulas complejas utilizando como guía los estándares y el tono de redacción definidos por los socios del despacho en local.</p>
+        </div>
+        <div class="sector-feat-card">
+          <h3>Revisión automatizada de contratos</h3>
+          <p>Compara documentos contractuales recibidos de contrapartes con tus políticas de riesgo interno para detectar de forma automática anomalías o cláusulas abusivas perjudiciales.</p>
+        </div>
+      </div>
+
+      <h2>Diseñado para abogados exigentes</h2>
+      <p>La implantación de Polaris AI no requiere que los abogados cambien su metodología de trabajo. El agente de IA local se integra con las carpetas de archivos de red del despacho y con su software de gestión documental de forma directa. La interfaz del usuario es intuitiva, rápida y está adaptada a la terminología del derecho en España.</p>
+
+      <div class="sector-cta-box">
+        <h2>¿Quieres probarlo con tus propios expedientes?</h2>
+        <p>Reserva una sesión de 30 minutos por WhatsApp. Un integrador te mostrará cómo Polaris AI indexa y extrae argumentos legales sobre un documento de prueba en un servidor local desconectado.</p>
+        <a href="https://wa.me/34602025877?text=Hola%20Polaris%20AI%2C%20me%20gustar%C3%ADa%20solicitar%20una%20demo%20de%20la%20plantilla%20para%20Despachos%20Legales." class="btn btn-primary" target="_blank">
+          Solicitar Demo de Abogados por WhatsApp
+          <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="background: var(--polaris-navy-deep); color: rgba(255,255,255,.7); padding: 48px 0 24px; font-size: 0.92rem;">
+    <div class="container">
+      <div class="footer-bottom" style="display:flex; justify-content:space-between; align-items:center; border-top: 1px solid rgba(255,255,255,.1); padding-top:22px; font-family:'JetBrains Mono', monospace; font-size:0.72rem; color: rgba(255,255,255,.45);">
+        <span>© 2026 POLARIS AI · TODOS LOS DERECHOS RESERVADOS</span>
+        <span>
+          <a href="./politica-privacidad.html" style="color:rgba(255,255,255,.7)">PRIVACIDAD</a> &nbsp;·&nbsp;
+          <a href="./politica-cookies.html" style="color:rgba(255,255,255,.7)">COOKIES</a> &nbsp;·&nbsp;
+          <a href="./terminos.html" style="color:rgba(255,255,255,.7)">TÉRMINOS</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./src/js/main.js"></script>
+</body>
+</html>
