@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO General -->
+  <title>Polaris AI — IA empresarial local y privada para PYMEs</title>
+  <meta name="description" content="Polaris AI es la plataforma de IA agéntica que se instala físicamente en tu empresa. 100% local, sin nube, con cumplimiento RGPD y cero cuotas por token. Optimizado para gestorías, clínicas, despachos y logística en España.">
+  <meta name="keywords" content="IA local, IA privada, inteligencia artificial local, RAG local, on-premise, PYMEs España, Madrid, protección de datos, Sage, A3, Odoo, automatización facturas, WhatsApp business">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://polaris-ai.es">
+  
+  <!-- SEO Geográfico (GEO) -->
+  <meta name="geo.region" content="ES-M" />
+  <meta name="geo.placename" content="Madrid" />
+  <meta name="geo.position" content="40.416775;-3.70379" />
+  <meta name="ICBM" content="40.416775, -3.70379" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://polaris-ai.es">
+  <meta property="og:title" content="Polaris AI — IA empresarial local y privada para PYMEs">
+  <meta property="og:description" content="Automatiza la gestión de facturas, pedidos por WhatsApp, inventarios e informes con IA ejecutada 100% local en tus servidores.">
+  <meta property="og:image" content="https://polaris-ai.es/logo.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://polaris-ai.es">
+  <meta property="twitter:title" content="Polaris AI — IA empresarial local y privada para PYMEs">
+  <meta property="twitter:description" content="Automatiza tus tareas mecánicas con IA agéntica y local.">
+  <meta property="twitter:image" content="https://polaris-ai.es/logo.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpg" href="./logo.jpg">
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Marcado Estructurado JSON-LD (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Polaris AI",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Linux, Windows Server",
+    "offers": {
+      "@type": "Offer",
+      "price": "199",
+      "priceCurrency": "EUR"
+    },
+    "description": "IA agéntica local y privada instalada on-premise en tu empresa."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Polaris AI España",
+    "image": "https://polaris-ai.es/logo.jpg",
+    "telephone": "+34 602 02 58 77",
+    "email": "contacto@polaris-ai.es",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Madrid",
+      "addressRegion": "Madrid",
+      "addressCountry": "ES"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 40.416775,
+      "longitude": -3.70379
+    },
+    "url": "https://polaris-ai.es"
+  }
+  </script>
+
+  <!-- Script principal de Vite -->
+  <script type="module" src="./src/js/main.js"></script>
+</head>
+<body data-screen-label="Polaris AI — Home">
+
+<!-- ============ INTRO LANDING ============ -->
+<div id="intro" role="dialog" aria-label="Polaris AI">
+  <button class="intro-skip" id="intro-skip" type="button" aria-label="Saltar intro">
+    Saltar
+  </button>
+
+  <div class="intro-landing">
+    <!-- Logo · pod blanco con arcos concéntricos -->
+    <div class="intro-logo">
+      <svg class="bg-arcs" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <radialgradient id="introBackdropGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#2E75B6" stop-opacity="0.20"></stop>
+            <stop offset="60%" stop-color="#1B3A6B" stop-opacity="0.05"></stop>
+            <stop offset="100%" stop-color="#ffffff" stop-opacity="0"></stop>
+          </radialgradient>
+        </defs>
+
+        <!-- Aura difuminada -->
+        <circle cx="300" cy="300" r="210" fill="url(#introBackdropGlow)" filter="blur(30px)"></circle>
+
+        <!-- Anillos punteados concéntricos -->
+        <circle class="ring-rotate-slow" cx="300" cy="300" r="225" fill="none" stroke="#1B3A6B" stroke-width="0.8" stroke-dasharray="2 6" opacity="0.30"></circle>
+        <circle class="ring-rotate-reverse" cx="300" cy="300" r="265" fill="none" stroke="#2E75B6" stroke-width="0.8" stroke-dasharray="4 8" opacity="0.22"></circle>
+        <circle cx="300" cy="300" r="315" fill="none" stroke="#94A0B6" stroke-width="0.6" stroke-dasharray="2 10" opacity="0.16"></circle>
+      </svg>
+
+      <!-- Pod blanco con el logo del usuario -->
+      <div class="intro-disk">
+        <img src="./logo.jpg" alt="Polaris AI Logo">
+      </div>
+    </div>
+
+    <!-- Texto de marca -->
+    <div class="intro-text">
+      <h1 class="intro-title">Polaris <span class="ai">AI</span></h1>
+      <div class="intro-tagline">
+        AGENTIC AI <span class="sep">•</span> LOCAL <span class="sep">•</span> PRIVATE <span class="sep">•</span> TRUSTED
+      </div>
+      <button class="intro-enter" id="intro-enter" type="button">
+        Entrar al sistema
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ NAVBAR ============ -->
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#" class="brand" aria-label="Polaris AI inicio">
+      <span class="logo-mark"><img src="./logo.jpg" alt="Polaris AI Logo"></span>
+      <span class="brand-name">
+        <span class="name">Polaris AI</span>
+        <span class="tag">Agentic · Local · Private</span>
+      </span>
+    </a>
+    <nav aria-label="Menú principal">
+      <ul class="nav-links">
+        <li><a href="#que-es">¿Qué es?</a></li>
+        <li><a href="#como-funciona">Cómo funciona</a></li>
+        <li><a href="#sectores">Sectores</a></li>
+        <li><a href="#perfiles">Casos reales</a></li>
+        <li><a href="#precios">Precios</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a href="https://wa.me/34602025877?text=Hola%20Polaris%20AI%2C%20me%20gustar%C3%ADa%20solicitar%20una%20demo%20gratuita." class="btn btn-primary btn-sm" target="_blank">
+        Solicitar demo
+        <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero" data-bg="plain">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow reveal">IA AGÉNTICA · ON-PREMISE · B2B</span>
+          <div class="hero-title-wrap">
+            <h1 class="reveal" data-delay="1" style="margin-top:18px;">
+              <span class="line">IA empresarial que vive</span>
+              <span class="line"><span class="power">dentro</span> de tu empresa.</span>
+              <span class="line accent">No en <span class="nube">la nube</span>.</span>
+            </h1>
+            <span class="hero-live reveal" data-delay="2">
+              <span class="live-dot" aria-hidden="true"></span>
+              <strong>100% on-premise</strong> <span class="sep">·</span> tus datos, tu hardware
+            </span>
+          </div>
+          <p class="hero-sub reveal" data-delay="2">
+            Polaris AI procesa facturas, documentos, WhatsApp e informes
+            <strong style="color:var(--fg)">100% en tus servidores</strong>.
+            Sin cuotas por token. Sin filtraciones. Aprende de tu operativa real
+            y se queda en tu empresa para siempre.
+          </p>
+          <div class="hero-cta reveal" data-delay="3">
+            <a href="https://wa.me/34602025877?text=Hola%20Polaris%20AI%2C%20quiero%20solicitar%20una%20demo%20gratuita%20desde%20la%20web." class="btn btn-primary" target="_blank">
+              Solicitar demo gratuita
+              <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
+            </a>
+            <a href="#como-funciona" class="btn btn-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 4 20 12 6 20 6 4" fill="currentColor" stroke="none"></polygon></svg>
+              Ver cómo funciona
+            </a>
+          </div>
+          <div class="hero-trust reveal" data-delay="4">
+            <span><span class="dot"></span>100% Local</span>
+            <span><span class="dot"></span>Sin Cloud</span>
+            <span><span class="dot"></span>RGPD Compliant</span>
+            <span><span class="dot"></span>Tus datos · Tu hardware</span>
+          </div>
+        </div>
+
+        <!-- Hero visual -->
+        <div class="hero-visual reveal" data-delay="2" aria-hidden="true">
+          <div class="glow"></div>
+          <div class="ring"></div>
+          <div class="ring r2"></div>
+          <div class="ring r3"></div>
+
+          <div class="orbit">
+            <div class="chip c1"><span class="led"></span>llama-3.1-70b · local</div>
+            <div class="chip c2 warn"><span class="led"></span>RAG sobre 12.847 docs</div>
+          </div>
+          <div class="orbit reverse">
+            <div class="chip c3"><span class="led"></span>RGPD · ISO 27001</div>
+            <div class="chip c4"><span class="led"></span>0 datos enviados al cloud</div>
+          </div>
+
+          <div class="isotype">
+            <img src="./logo.jpg" alt="Polaris AI Logo Mark">
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero stats -->
+      <div class="hero-stats reveal" data-delay="3">
+        <div class="stat">
+          <div class="num" data-target="100" data-suffix="%">0<span class="suffix">%</span></div>
+          <span class="label">// Datos en local</span>
+        </div>
+        <div class="stat">
+          <div class="num" data-target="0" data-suffix="€/token">0<span class="suffix">€/token</span></div>
+          <span class="label">// Coste por consulta</span>
+        </div>
+        <div class="stat">
+          <div class="num" data-target="14" data-suffix=" h/sem">0<span class="suffix"> h/sem</span></div>
+          <span class="label">// Ahorro medio/empleado</span>
+        </div>
+        <div class="stat">
+          <div class="num" data-target="48" data-suffix=" h">0<span class="suffix"> h</span></div>
+          <span class="label">// Instalación on-prem</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST MARQUEE ============ -->
+  <div class="marquee-wrap" aria-hidden="true">
+    <div class="marquee-inner">
+      <span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L3 7v6c0 5 4 9 9 10 5-1 9-5 9-10V7l-9-5z"></path></svg> GESTORÍAS Y ASESORÍAS
+        <svg width="6" height="6" viewBox="0 0 6 6"><circle cx="3" cy="3" r="3" fill="currentColor"></circle></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v8M12 12v6M9 18h6"></path></svg> CLÍNICAS Y CENTROS MÉDICOS
+        <svg width="6" height="6" viewBox="0 0 6 6"><circle cx="3" cy="3" r="3" fill="currentColor"></circle></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="14" rx="2"></rect><path d="M3 10h18M8 14h2"></path></svg> DESPACHOS LEGALES
+        <svg width="6" height="6" viewBox="0 0 6 6"><circle cx="3" cy="3" r="3" fill="currentColor"></circle></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h13l5 5v5h-2M1 7v10h2"></path><circle cx="7" cy="17" r="2"></circle><circle cx="17" cy="17" r="2"></circle></svg> LOGÍSTICA Y DISTRIBUCIÓN
+        <svg width="6" height="6" viewBox="0 0 6 6"><circle cx="3" cy="3" r="3" fill="currentColor"></circle></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M9 3v18M3 9h18"></path></svg> PYMES DE 5 A 50 EMPLEADOS
+        <svg width="6" height="6" viewBox="0 0 6 6"><circle cx="3" cy="3" r="3" fill="currentColor"></circle></svg>
+      </span>
+      <span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L3 7v6c0 5 4 9 9 10 5-1 9-5 9-10V7l-9-5z"></path></svg> GESTORÍAS Y ASESORÍAS
+        <svg width="6" height="6" viewBox="0 0 6 6"><circle cx="3" cy="3" r="3" fill="currentColor"></circle></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v8M12 12v6M9 18h6"></path></svg> CLÍNICAS Y CENTROS MÉDICOS
+        <svg width="6" height="6" viewBox="0 0 6 6"><circle cx="3" cy="3" r="3" fill="currentColor"></circle></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="14" rx="2"></rect><path d="M3 10h18M8 14h2"></path></svg> DESPACHOS LEGALES
+        <svg width="6" height="6" viewBox="0 0 6 6"><circle cx="3" cy="3" r="3" fill="currentColor"></circle></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h13l5 5v5h-2M1 7v10h2"></path><circle cx="7" cy="17" r="2"></circle><circle cx="17" cy="17" r="2"></circle></svg> LOGÍSTICA Y DISTRIBUCIÓN
+        <svg width="6" height="6" viewBox="0 0 6 6"><circle cx="3" cy="3" r="3" fill="currentColor"></circle></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M9 3v18M3 9h18"></path></svg> PYMES DE 5 A 50 EMPLEADOS
+        <svg width="6" height="6" viewBox="0 0 6 6"><circle cx="3" cy="3" r="3" fill="currentColor"></circle></svg>
+      </span>
+    </div>
+  </div>
+
+  <!-- ============ PILARES ============ -->
+  <section class="pillars" id="que-es">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">// QUÉ ES POLARIS AI</span>
+        <h2>Tres principios que la diferencian de <span class="ac">toda IA en la nube.</span></h2>
+        <p>Polaris AI es una plataforma de IA agéntica que se instala en la infraestructura de tu empresa. Sin enviar un solo dato fuera de tus muros. Sin contratos eternos con un proveedor de cloud. Sin sorpresas en la factura.</p>
+      </div>
+
+      <div class="pillars-grid">
+        <article class="feature-card card-privacidad reveal" data-delay="1">
+          <div class="icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg>
+          </div>
+          <h3>Privacidad total — por diseño.</h3>
+          <p>Tu información nunca sale de tu red. Nada de copias en data-centers ajenos, nada de prompts viajando a otro continente. Cumplimiento nativo de RGPD, secreto profesional y categorías especiales.</p>
+          <div class="footnote">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg>
+            Aislamiento físico · 0 telemetría externa
+          </div>
+        </article>
+
+        <article class="feature-card card-ahorro reveal" data-delay="2">
+          <div class="icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"></rect><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M6 14h12"></path></svg>
+          </div>
+          <h3>Sin cuotas por uso, sin sorpresas.</h3>
+          <p>Inversión en hardware una vez, licencia mensual fija, consultas ilimitadas. El coste no escala con el uso: tu equipo deja de tener miedo a "preguntarle demasiado a la IA".</p>
+          <div class="footnote">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg>
+            0 €/token · 0 € por consulta
+          </div>
+        </article>
+
+        <article class="feature-card card-aprendizaje reveal" data-delay="3">
+          <div class="icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M12 1v6M12 17v6M4.2 4.2l4.3 4.3M15.5 15.5l4.3 4.3M1 12h6M17 12h6M4.2 19.8l4.3-4.3M15.5 8.5l4.3-4.3"></path></svg>
+          </div>
+          <h3>Aprende de tu empresa real.</h3>
+          <p>Indexa tus contratos, facturas, manuales, históricos de WhatsApp y herramientas internas. Cada respuesta se basa en tu operativa, tu vocabulario y tus reglas. Sin entrenar modelos públicos con tus datos.</p>
+          <div class="footnote">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg>
+            RAG sobre tu corpus · fine-tuning opcional
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ARQUITECTURA / CÓMO FUNCIONA ============ -->
+  <section class="arch" id="como-funciona">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">// ARQUITECTURA</span>
+        <h2>Cómo encaja Polaris AI en tu empresa.</h2>
+        <p>Una unidad de cómputo segura instalada en tus servidores, conectada a las herramientas que ya usas. Hablas con ella desde el navegador, WhatsApp o tu ERP. Las respuestas y los datos nunca salen.</p>
+      </div>
+
+      <div class="arch-canvas reveal" data-delay="1">
+        <div class="arch-grid">
+          <!-- Inputs -->
+          <div class="arch-col">
+            <h4>01 · ENTRADAS</h4>
+            <div class="arch-box">
+              <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"></path></svg></div>
+              <div>
+                <div class="label">Facturas y albaranes</div>
+                <div class="meta">PDF · XML · escaneados</div>
+              </div>
+            </div>
+            <div class="arch-box">
+              <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5z"></path></svg></div>
+              <div>
+                <div class="label">WhatsApp Business</div>
+                <div class="meta">Pedidos · consultas</div>
+              </div>
+            </div>
+            <div class="arch-box">
+              <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
+              <div>
+                <div class="label">ERP / CRM existente</div>
+                <div class="meta">A3 · Sage · Odoo · custom</div>
+              </div>
+            </div>
+            <div class="arch-box">
+              <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h18M3 12h18M3 17h18"></path></svg></div>
+              <div>
+                <div class="label">Documentos internos</div>
+                <div class="meta">Drive · Sharepoint · NAS</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Core -->
+          <div class="arch-col" style="position:relative;">
+            <h4 style="color: rgba(255,255,255,.6);">02 · NÚCLEO POLARIS AI</h4>
+            <div class="arch-core">
+              <span class="badge-on"><span class="pulse"></span>On-prem · running</span>
+              <h3>Agente Polaris</h3>
+              <div class="core-sub">LLM local + RAG + herramientas + memoria</div>
+              <div class="core-grid">
+                <div class="core-cell">
+                  <span class="k">// modelo</span>
+                  <span class="v">Llama 3.1 70B</span>
+                </div>
+                <div class="core-cell">
+                  <span class="k">// RAG</span>
+                  <span class="v">12.847 docs</span>
+                </div>
+                <div class="core-cell">
+                  <span class="k">// tools</span>
+                  <span class="v">14 conectores</span>
+                </div>
+                <div class="core-cell">
+                  <span class="k">// uptime</span>
+                  <span class="v">99.97%</span>
+                </div>
+              </div>
+            </div>
+            <!-- arrows -->
+            <div class="arch-arrow" style="left:-40px;" aria-hidden="true">
+              <svg viewBox="0 0 60 30">
+                <line x1="0" y1="15" x2="50" y2="15" stroke="var(--polaris-blue)" stroke-width="1.5" stroke-dasharray="3 4"></line>
+                <polyline points="44,9 50,15 44,21" fill="none" stroke="var(--polaris-blue)" stroke-width="1.5"></polyline>
+              </svg>
+            </div>
+            <div class="arch-arrow" style="right:-40px;" aria-hidden="true">
+              <svg viewBox="0 0 60 30">
+                <line x1="0" y1="15" x2="50" y2="15" stroke="var(--polaris-blue)" stroke-width="1.5" stroke-dasharray="3 4"></line>
+                <polyline points="44,9 50,15 44,21" fill="none" stroke="var(--polaris-blue)" stroke-width="1.5"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Outputs -->
+          <div class="arch-col">
+            <h4>03 · ACCIONES</h4>
+            <div class="arch-box">
+              <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 11 22 2 13 21 11 13 3 11"></polyline></svg></div>
+              <div>
+                <div class="label">Asienta facturas</div>
+                <div class="meta">→ ERP / contabilidad</div>
+              </div>
+            </div>
+            <div class="arch-box">
+              <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></div>
+              <div>
+                <div class="label">Genera informes</div>
+                <div class="meta">Semanal · KPI · ejecutivo</div>
+              </div>
+            </div>
+            <div class="arch-box">
+              <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5z"></path></svg></div>
+              <div>
+                <div class="label">Responde por WhatsApp</div>
+                <div class="meta">Confirma · escala · agenda</div>
+              </div>
+            </div>
+            <div class="arch-box">
+              <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg></div>
+              <div>
+                <div class="label">Búsqueda semántica</div>
+                <div class="meta">Sobre todos tus docs</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTORES ============ -->
+  <section id="sectores">
+    <div class="container">
+      <div class="section-head reveal" style="display:flex; justify-content:space-between; flex-direction:row; align-items:flex-end; max-width:none; gap:24px;">
+        <div style="display:flex; flex-direction:column; gap:14px; max-width:680px;">
+          <span class="eyebrow">// SECTORES</span>
+          <h2>Diseñado para sectores donde <span class="ac">tus datos no pueden salir.</span></h2>
+          <p>Plantillas, integraciones y argumentos legales preparados para verticales con alta sensibilidad de datos. Si tu sector exige secreto profesional, RGPD reforzado o trazabilidad estricta — Polaris AI es para ti.</p>
+        </div>
+        <a href="https://wa.me/34602025877?text=Hola%20Polaris%20AI%2C%20me%20gustar%C3%ADa%20consultar%20plantillas%20sectoriales." class="btn btn-ghost" style="color: var(--accent-2); font-weight:600;" target="_blank">Ver todos los sectores
+          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
+        </a>
+      </div>
+
+      <div class="sectors-grid">
+        <a class="sector-card card-sec-gestoria reveal" data-delay="1" href="https://wa.me/34602025877?text=Hola%20Polaris%20AI%2C%20me%20interesa%20la%20soluci%C3%B3n%20para%20Gestor%C3%ADas%20y%20Asesor%C3%ADas." target="_blank">
+          <div class="sec-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M16 13H8M16 17H8"></path></svg>
+          </div>
+          <h3>Gestorías y asesorías</h3>
+          <p class="pain">Procesa miles de facturas mensuales, ata plazos fiscales y responde a clientes sin abrir un solo documento manualmente.</p>
+          <div class="sec-footnote">
+            <div class="sec-meta">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg>
+              A3 & Sage · PDF inteligente
+            </div>
+            <span class="more">Ver plantilla sector <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"></path></svg></span>
+          </div>
+        </a>
+
+        <a class="sector-card card-sec-clinica reveal" data-delay="2" href="https://wa.me/34602025877?text=Hola%20Polaris%20AI%2C%20me%20interesa%20la%20soluci%C3%B3n%20para%20Cl%C3%ADnicas%20y%20Salud." target="_blank">
+          <div class="sec-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v8M12 12v6M9 18h6"></path></svg>
+          </div>
+          <h3>Clínicas y centros médicos</h3>
+          <p class="pain">RGPD art. 9 sobre categorías especiales sin esfuerzo. Historiales, agenda y partes 100% locales.</p>
+          <div class="sec-footnote">
+            <div class="sec-meta">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg>
+              RGPD Art. 9 · Datos cifrados
+            </div>
+            <span class="more">Ver plantilla sector <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"></path></svg></span>
+          </div>
+        </a>
+
+        <a class="sector-card card-sec-despacho reveal" data-delay="3" href="https://wa.me/34602025877?text=Hola%20Polaris%20AI%2C%20me%20interesa%20la%20soluci%C3%B3n%20para%20Despachos%20Legales." target="_blank">
+          <div class="sec-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L4 6v6c0 5 4 9 8 10 4-1 8-5 8-10V6l-8-4z"></path><path d="M9 12l2 2 4-4"></path></svg>
+          </div>
+          <h3>Despachos legales</h3>
+          <p class="pain">Secreto profesional garantizado. Sumarios, contratos y jurisprudencia indexados sin enviarlos a la nube.</p>
+          <div class="sec-footnote">
+            <div class="sec-meta">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg>
+              Secreto profesional · Local
+            </div>
+            <span class="more">Ver plantilla sector <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"></path></svg></span>
+          </div>
+        </a>
+
+        <a class="sector-card card-sec-logistica reveal" data-delay="4" href="https://wa.me/34602025877?text=Hola%20Polaris%20AI%2C%20me%20interesa%20la%20soluci%C3%B3n%20para%20Log%C3%ADstica%20y%20Distribuci%C3%B3n." target="_blank">
+          <div class="sec-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h13l5 5v5h-2M1 7v10h2"></path><circle cx="7" cy="17" r="2"></circle><circle cx="17" cy="17" r="2"></circle></svg>
+          </div>
+          <h3>Logística y distribución</h3>
+          <p class="pain">Albaranes, pedidos por WhatsApp, control de stock y enrutado, automatizados sin tocar el ERP existente.</p>
+          <div class="sec-footnote">
+            <div class="sec-meta">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg>
+              Albaranes · Integración ERP
+            </div>
+            <span class="more">Ver plantilla sector <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"></path></svg></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PERFILES / CASOS REALES ============ -->
+  <section class="proof" id="perfiles">
+    <div class="container">
+      <div class="head reveal">
+        <span class="eyebrow">// Perfiles que trabajan con Polaris AI</span>
+        <h2>Seis perfiles. <span class="ac">Un mismo resultado.</span></h2>
+        <p>Casos representativos de PYMEs españolas de 3 a 10 empleados que pueden transformar su trabajo diario con IA agéntica completamente local.</p>
+        <span class="estim-note">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4M12 16h.01"></path></svg>
+          <span><strong>Estimaciones</strong> · datos proyectados, aún no implantado</span>
+        </span>
+      </div>
+
+      <div class="perfil-carousel-container">
+        <div class="perfil-carousel-track">
+        <!-- LAURA · GESTORÍA -->
+        <article class="perfil-card card-gestoria reveal" data-delay="1">
+          <div class="perfil-illu">
+            <!-- Background Context Graphics -->
+            <div class="perfil-bg-context">
+              <svg viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 30H320M0 60H320M0 90H320M0 120H320M0 150H320" stroke="rgba(46,117,182,0.06)" stroke-width="1"/>
+                <path d="M40 0V180M80 0V180M120 0V180M160 0V180M200 0V180M240 0V180M280 0V180" stroke="rgba(46,117,182,0.06)" stroke-width="1"/>
+                <path d="M-10 140 L 70 120 L 130 145 L 200 80 L 260 95 L 330 35" stroke="url(#gestoria-bg-grad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M-10 140 L 70 120 L 130 145 L 200 80 L 260 95 L 330 35 L 330 180 L -10 180 Z" fill="url(#gestoria-bg-area)" opacity="0.05"/>
+                <circle cx="200" cy="80" r="4" fill="#3b9aff" opacity="0.6" class="pulse-dot"/>
+                <circle cx="260" cy="95" r="3" fill="#3b9aff" opacity="0.4"/>
+                <circle cx="330" cy="35" r="5" fill="#00d2ff" opacity="0.8" class="pulse-dot"/>
+                <defs>
+                  <linearGradient id="gestoria-bg-grad" x1="0" y1="140" x2="320" y2="40" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#2E75B6" stop-opacity="0.1"/>
+                    <stop offset="0.5" stop-color="#3b9aff" stop-opacity="0.3"/>
+                    <stop offset="1" stop-color="#00d2ff" stop-opacity="0.5"/>
+                  </linearGradient>
+                  <linearGradient id="gestoria-bg-area" x1="0" y1="40" x2="0" y2="180" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#00d2ff"/>
+                    <stop offset="1" stop-color="#00d2ff" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="perfil-avatar" aria-hidden="true">LM</div>
+            <div class="perfil-sector">
+              <div class="perfil-sector-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="8" y1="6" x2="16" y2="6"></line><line x1="8" y1="10" x2="10" y2="10"></line><line x1="13" y1="10" x2="16" y2="10"></line><line x1="8" y1="14" x2="10" y2="14"></line><line x1="13" y1="14" x2="16" y2="14"></line><line x1="8" y1="18" x2="10" y2="18"></line><line x1="13" y1="18" x2="16" y2="18"></line></svg>
+              </div>
+              <span class="perfil-sector-label">Gestoría</span>
+            </div>
+            <!-- Art: Invoices stack -->
+            <svg class="perfil-art" viewBox="0 0 140 64" fill="none" aria-hidden="true">
+              <line x1="6" y1="22" x2="22" y2="22" stroke="currentColor" stroke-opacity=".45" stroke-width="1.5" stroke-linecap="round"></line>
+              <line x1="2" y1="32" x2="24" y2="32" stroke="currentColor" stroke-opacity=".65" stroke-width="1.5" stroke-linecap="round"></line>
+              <line x1="8" y1="42" x2="22" y2="42" stroke="currentColor" stroke-opacity=".4" stroke-width="1.5" stroke-linecap="round"></line>
+              <rect x="44" y="16" width="36" height="44" rx="2" fill="rgba(255,255,255,.75)" stroke="currentColor" stroke-opacity=".4" stroke-width="1.2"></rect>
+              <rect x="50" y="10" width="36" height="44" rx="2" fill="#ffffff" stroke="currentColor" stroke-opacity=".55" stroke-width="1.2"></rect>
+              <rect x="56" y="4" width="36" height="44" rx="2" fill="#ffffff" stroke="currentColor" stroke-opacity=".8" stroke-width="1.3"></rect>
+              <line x1="60" y1="12" x2="80" y2="12" stroke="currentColor" stroke-opacity=".7" stroke-width="1.3" stroke-linecap="round"></line>
+              <line x1="60" y1="18" x2="86" y2="18" stroke="currentColor" stroke-opacity=".35" stroke-width="1.1" stroke-linecap="round"></line>
+              <line x1="60" y1="24" x2="76" y2="24" stroke="currentColor" stroke-opacity=".35" stroke-width="1.1" stroke-linecap="round"></line>
+              <line x1="60" y1="30" x2="84" y2="30" stroke="currentColor" stroke-opacity=".35" stroke-width="1.1" stroke-linecap="round"></line>
+              <text x="60" y="42" font-family="JetBrains Mono, monospace" font-size="7" font-weight="700" fill="currentColor" fill-opacity=".85">€ 1.240</text>
+              <circle cx="104" cy="14" r="8" fill="rgba(56,161,105,.16)" stroke="rgba(56,161,105,.95)" stroke-width="1.3"></circle>
+              <path d="M100 14.5 l2.6 2.6 l4.4 -4.4" stroke="rgba(56,161,105,1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+            </svg>
+          </div>
+          <div class="perfil-body">
+            <span class="perfil-role">Responsable de contabilidad</span>
+            <h3 class="perfil-name">Laura M. — 6 empleados</h3>
+            <p class="perfil-quote">"Antes tardaba 3 horas procesando facturas de proveedores. Con Polaris las procesaría en segundos y solo revisaría las excepciones."</p>
+            <div class="perfil-stat">
+              <div class="ic">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="13" r="8"></circle><path d="M12 9v4l2 2M12 3v2M5 5l1 1M19 5l-1 1"></path></svg>
+              </div>
+              <div>
+                <div class="pct">~-68% <span class="pct-est">est.</span></div>
+                <div class="desc">tiempo en gestión de facturas · ~2.5h/día liberadas</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARLOS · LOGÍSTICA -->
+        <article class="perfil-card card-almacen reveal" data-delay="2">
+          <div class="perfil-illu">
+            <!-- Background Context Graphics -->
+            <div class="perfil-bg-context">
+              <svg viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M-40 90 L160 -10 L360 90 L160 190 Z" stroke="rgba(229,160,75,0.06)" stroke-width="1"/>
+                <path d="M-40 40 L160 -60 L360 40" stroke="rgba(229,160,75,0.04)" stroke-width="1"/>
+                <path d="M-40 140 L160 40 L360 140" stroke="rgba(229,160,75,0.05)" stroke-width="1"/>
+                <path d="M20 160 H300" stroke="rgba(229,160,75,0.12)" stroke-width="2" stroke-dasharray="8 8" class="dash-flow"/>
+                <path d="M260 110 L280 100 L300 110 L300 130 L280 140 L260 130 Z" fill="rgba(229,160,75,0.03)" stroke="rgba(229,160,75,0.12)" stroke-width="1"/>
+                <path d="M280 100 V140 M260 110 L280 120 L300 110" stroke="rgba(229,160,75,0.12)" stroke-width="1"/>
+                <circle cx="160" cy="90" r="60" stroke="rgba(229,160,75,0.08)" stroke-width="1.5" stroke-dasharray="4 6" class="spin-ring"/>
+                <circle cx="160" cy="90" r="30" stroke="rgba(229,160,75,0.06)" stroke-width="1"/>
+              </svg>
+            </div>
+            <div class="perfil-avatar" aria-hidden="true">CR</div>
+            <div class="perfil-sector">
+              <div class="perfil-sector-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73L13 2.27a2 2 0 0 0-2 0L4 6.27A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12"></path></svg>
+              </div>
+              <span class="perfil-sector-label">Almacén</span>
+            </div>
+            <!-- Art: Box and mic -->
+            <svg class="perfil-art" viewBox="0 0 140 64" fill="none" aria-hidden="true">
+              <path d="M18 14 l22 -11 l22 11 v28 l-22 11 l-22 -11 z" fill="rgba(46,117,182,.14)" stroke="currentColor" stroke-opacity=".75" stroke-width="1.3"></path>
+              <path d="M18 14 l22 10.5 l22 -10.5 M40 24.5 v29.5" stroke="currentColor" stroke-opacity=".75" stroke-width="1.3"></path>
+              <path d="M30 8.5 l10 5 l10 -5 M40 13.5 v5" stroke="currentColor" stroke-opacity=".4" stroke-width="1" stroke-dasharray="2 2"></path>
+              <circle cx="106" cy="32" r="14" fill="#ffffff" stroke="currentColor" stroke-opacity=".75" stroke-width="1.3"></circle>
+              <path d="M106 24 v11 M102 28 h8" stroke="rgba(56,161,105,.95)" stroke-width="1.8" stroke-linecap="round"></path>
+              <line x1="78" y1="22" x2="94" y2="22" stroke="currentColor" stroke-opacity=".35" stroke-width="1"></line>
+              <line x1="96" y1="22" x2="112" y2="22" stroke="currentColor" stroke-opacity=".35" stroke-width="1"></line>
+              <line x1="87" y1="42" x2="103" y2="42" stroke="currentColor" stroke-opacity=".35" stroke-width="1"></line>
+              <line x1="105" y1="42" x2="121" y2="42" stroke="currentColor" stroke-opacity=".35" stroke-width="1"></line>
+            </svg>
+          </div>
+          <div class="perfil-body">
+            <span class="perfil-role">Jefe de almacén</span>
+            <h3 class="perfil-name">Carlos R. — 8 empleados</h3>
+            <p class="perfil-quote">"Podría preguntar al agente por voz cuánto stock queda de cualquier referencia y respondería en segundos. Sin tener que ir al ordenador."</p>
+            <div class="perfil-stat">
+              <div class="ic">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73L13 2.27a2 2 0 0 0-2 0L4 6.27A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12"></path></svg>
+              </div>
+              <div>
+                <div class="pct">~-82% <span class="pct-est">est.</span></div>
+                <div class="desc">consultas manuales de inventario · ~1.8h/día liberadas</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- MARTA · DESPACHO JURÍDICO -->
+        <article class="perfil-card card-despacho reveal" data-delay="3">
+          <div class="perfil-illu">
+            <!-- Background Context Graphics -->
+            <div class="perfil-bg-context">
+              <svg viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="160" cy="90" r="100" stroke="rgba(124,91,217,0.05)" stroke-width="1"/>
+                <circle cx="160" cy="90" r="80" stroke="rgba(124,91,217,0.06)" stroke-width="1.5" stroke-dasharray="6 8" class="spin-ring-rev"/>
+                <circle cx="160" cy="90" r="60" stroke="rgba(124,91,217,0.08)" stroke-width="1"/>
+                <path d="M40 150 H90 M45 150 V50 M55 150 V50 M65 150 V50 M75 150 V50 M85 150 V50 M40 50 H90 M42 45 H88" stroke="rgba(124,91,217,0.05)" stroke-width="1.5"/>
+                <path d="M230 40 H270 V60 C270 90 250 110 250 110 C250 110 230 90 230 60 Z" stroke="rgba(124,91,217,0.12)" stroke-width="1.5" fill="rgba(124,91,217,0.02)"/>
+                <path d="M235 45 H265 V58 C265 82 250 98 250 98 C250 98 235 82 235 58 Z" stroke="rgba(124,91,217,0.06)" stroke-width="1"/>
+              </svg>
+            </div>
+            <div class="perfil-avatar" aria-hidden="true">MS</div>
+            <div class="perfil-sector">
+              <div class="perfil-sector-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"></path><path d="M5 9l-3 6h6z"></path><path d="M19 9l-3 6h6z"></path><path d="M2 15a3 3 0 0 0 6 0"></path><path d="M16 15a3 3 0 0 0 6 0"></path><path d="M7 21h10"></path><path d="M12 3l-7 6"></path><path d="M12 3l7 6"></path></svg>
+              </div>
+              <span class="perfil-sector-label">Despacho</span>
+            </div>
+            <!-- Art: Folder and triage -->
+            <svg class="perfil-art" viewBox="0 0 140 64" fill="none" aria-hidden="true">
+              <rect x="14" y="6" width="26" height="3" rx="1" fill="rgba(255,255,255,.55)" stroke="currentColor" stroke-opacity=".3" stroke-width="1"></rect>
+              <rect x="12" y="11" width="30" height="4" rx="1" fill="rgba(255,255,255,.7)" stroke="currentColor" stroke-opacity=".4" stroke-width="1"></rect>
+              <rect x="10" y="18" width="34" height="24" rx="2" fill="#fff" stroke="currentColor" stroke-opacity=".7" stroke-width="1.3"></rect>
+              <path d="M10 18 l17 13 l17 -13" stroke="currentColor" stroke-opacity=".7" stroke-width="1.3" fill="none" stroke-linejoin="round"></path>
+              <path d="M50 22 q12 -6 22 -10" stroke="currentColor" stroke-opacity=".6" stroke-width="1.3" fill="none" stroke-linecap="round"></path>
+              <path d="M70 11 l3.5 1 l-1 3.5" stroke="currentColor" stroke-opacity=".6" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M50 38 q12 6 22 10" stroke="currentColor" stroke-opacity=".6" stroke-width="1.3" fill="none" stroke-linecap="round"></path>
+              <path d="M70 49 l3.5 -1 l-1 -3.5" stroke="currentColor" stroke-opacity=".6" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M80 6 l6 0 l2 -2 l8 0 a2 2 0 0 1 2 2 v16 a2 2 0 0 1 -2 2 h-16 a2 2 0 0 1 -2 -2 v-14 a2 2 0 0 1 2 -2 z" fill="#fff" stroke="currentColor" stroke-opacity=".7" stroke-width="1.2"></path>
+              <line x1="82" y1="14" x2="94" y2="14" stroke="currentColor" stroke-opacity=".35" stroke-width="1"></line>
+              <line x1="82" y1="18" x2="92" y2="18" stroke="currentColor" stroke-opacity=".35" stroke-width="1"></line>
+              <circle cx="110" cy="12" r="3.5" fill="rgba(220,38,38,.7)" stroke="none"></circle>
+              <path d="M80 34 l6 0 l2 -2 l8 0 a2 2 0 0 1 2 2 v16 a2 2 0 0 1 -2 2 h-16 a2 2 0 0 1 -2 -2 v-14 a2 2 0 0 1 2 -2 z" fill="#fff" stroke="currentColor" stroke-opacity=".55" stroke-width="1.2"></path>
+              <line x1="82" y1="42" x2="94" y2="42" stroke="currentColor" stroke-opacity=".3" stroke-width="1"></line>
+              <line x1="82" y1="46" x2="92" y2="46" stroke="currentColor" stroke-opacity=".3" stroke-width="1"></line>
+              <circle cx="110" cy="42" r="3.5" fill="rgba(46,117,182,.55)" stroke="none"></circle>
+            </svg>
+          </div>
+          <div class="perfil-body">
+            <span class="perfil-role">Administrativa jurídica</span>
+            <h3 class="perfil-name">Marta S. — 4 empleados</h3>
+            <p class="perfil-quote">"Polaris clasificaría y resumiría cada email entrante en segundos. Llegaría por la mañana y tendría la bandeja lista para actuar."</p>
+            <div class="perfil-stat">
+              <div class="ic">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"></path><path d="M4 8h16M8 4v16"></path></svg>
+              </div>
+              <div>
+                <div class="pct">~-65% <span class="pct-est">est.</span></div>
+                <div class="desc">triage de correo y expedientes · ~1.5h/día liberadas</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- JAVIER · CLÍNICA DENTAL -->
+        <article class="perfil-card card-clinica reveal" data-delay="1">
+          <div class="perfil-illu">
+            <!-- Background Context Graphics -->
+            <div class="perfil-bg-context">
+              <svg viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 20H320M0 40H320M0 60H320M0 80H320M0 100H320M0 120H320M0 140H320M0 160H320" stroke="rgba(56,161,105,0.04)" stroke-width="1"/>
+                <path d="M20 0V180M40 0V180M60 0V180M80 0V180M100 0V180M120 0V180M140 0V180M160 0V180M180 0V180M200 0V180M220 0V180M240 0V180M260 0V180M280 0V180M300 0V180" stroke="rgba(56,161,105,0.04)" stroke-width="1"/>
+                <path d="M-10 90 H100 L110 80 L115 105 L125 50 L135 125 L143 85 L150 95 L160 90 H330" stroke="url(#clinica-bg-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="ecg-flow"/>
+                <path d="M260 30 H280 V10 H300 V30 H320 V50 H300 V70 H280 V50 H260 Z" stroke="rgba(56,161,105,0.07)" stroke-width="1.5" fill="rgba(56,161,105,0.02)"/>
+                <defs>
+                  <linearGradient id="clinica-bg-grad" x1="0" y1="90" x2="320" y2="90" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#38A169" stop-opacity="0.1"/>
+                    <stop offset="0.4" stop-color="#38A169" stop-opacity="0.4"/>
+                    <stop offset="0.5" stop-color="#00f5a0" stop-opacity="0.9"/>
+                    <stop offset="0.6" stop-color="#38A169" stop-opacity="0.4"/>
+                    <stop offset="1" stop-color="#38A169" stop-opacity="0.1"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="perfil-avatar" aria-hidden="true">JT</div>
+            <div class="perfil-sector">
+              <div class="perfil-sector-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-9 4 18 3-9h4"></path></svg>
+              </div>
+              <span class="perfil-sector-label">Clínica</span>
+            </div>
+            <!-- Art: phone and calendar -->
+            <svg class="perfil-art" viewBox="0 0 140 64" fill="none" aria-hidden="true">
+              <rect x="8" y="8" width="24" height="44" rx="3" fill="#fff" stroke="currentColor" stroke-opacity=".7" stroke-width="1.3"></rect>
+              <line x1="12" y1="14" x2="28" y2="14" stroke="currentColor" stroke-opacity=".35" stroke-width="1"></line>
+              <circle cx="20" cy="48" r="1.6" fill="currentColor" fill-opacity=".45"></circle>
+              <circle cx="30" cy="12" r="3.5" fill="rgba(220,38,38,.75)" stroke="none"></circle>
+              <rect x="12" y="20" width="11" height="5" rx="2" fill="rgba(46,117,182,.18)" stroke="none"></rect>
+              <rect x="17" y="28" width="11" height="5" rx="2" fill="rgba(56,161,105,.22)" stroke="none"></rect>
+              <rect x="12" y="36" width="11" height="5" rx="2" fill="rgba(46,117,182,.18)" stroke="none"></rect>
+              <path d="M38 30 h8 M42 26 l4 4 l-4 4" stroke="currentColor" stroke-opacity=".7" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+              <rect x="54" y="12" width="80" height="42" rx="3" fill="#fff" stroke="currentColor" stroke-opacity=".75" stroke-width="1.3"></rect>
+              <line x1="54" y1="22" x2="134" y2="22" stroke="currentColor" stroke-opacity=".75" stroke-width="1.3"></line>
+              <line x1="62" y1="8" x2="62" y2="14" stroke="currentColor" stroke-opacity=".75" stroke-width="1.3" stroke-linecap="round"></line>
+              <line x1="126" y1="8" x2="126" y2="14" stroke="currentColor" stroke-opacity=".75" stroke-width="1.3" stroke-linecap="round"></line>
+              <circle cx="64" cy="32" r="2" fill="currentColor" fill-opacity=".25"></circle>
+              <circle cx="78" cy="32" r="2" fill="rgba(56,161,105,.9)"></circle>
+              <circle cx="92" cy="32" r="2" fill="currentColor" fill-opacity=".25"></circle>
+              <circle cx="106" cy="32" r="2" fill="rgba(56,161,105,.9)"></circle>
+              <circle cx="120" cy="32" r="2" fill="currentColor" fill-opacity=".25"></circle>
+              <circle cx="64" cy="44" r="2" fill="rgba(56,161,105,.9)"></circle>
+              <circle cx="78" cy="44" r="2" fill="currentColor" fill-opacity=".25"></circle>
+              <circle cx="92" cy="44" r="2" fill="rgba(56,161,105,.9)"></circle>
+              <circle cx="106" cy="44" r="2" fill="currentColor" fill-opacity=".25"></circle>
+              <circle cx="120" cy="44" r="2" fill="rgba(56,161,105,.9)"></circle>
+            </svg>
+          </div>
+          <div class="perfil-body">
+            <span class="perfil-role">Director clínica dental</span>
+            <h3 class="perfil-name">Javier T. — 10 empleados</h3>
+            <p class="perfil-quote">"Confirmaciones de cita, recordatorios y partes los gestionaría Polaris. La recepción atendería al paciente, no al teléfono."</p>
+            <div class="perfil-stat">
+              <div class="ic">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg>
+              </div>
+              <div>
+                <div class="pct">~-71% <span class="pct-est">est.</span></div>
+                <div class="desc">gestión de citas y recordatorios · ~3h/día liberadas</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ELENA · ASESORÍA FISCAL -->
+        <article class="perfil-card card-asesoria reveal" data-delay="2">
+          <div class="perfil-illu">
+            <!-- Background Context Graphics -->
+            <div class="perfil-bg-context">
+              <svg viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="70" cy="120" r="30" stroke="rgba(229,160,75,0.06)" stroke-width="1.5"/>
+                <circle cx="70" cy="120" r="45" stroke="rgba(229,160,75,0.04)" stroke-width="1" stroke-dasharray="3 3"/>
+                <rect x="180" y="110" width="16" height="50" rx="2" fill="rgba(229,160,75,0.04)" stroke="rgba(229,160,75,0.1)" stroke-width="1"/>
+                <rect x="208" y="90" width="16" height="70" rx="2" fill="rgba(229,160,75,0.06)" stroke="rgba(229,160,75,0.12)" stroke-width="1"/>
+                <rect x="236" y="70" width="16" height="90" rx="2" fill="rgba(229,160,75,0.08)" stroke="rgba(229,160,75,0.15)" stroke-width="1"/>
+                <rect x="264" y="40" width="16" height="110" rx="2" fill="rgba(229,160,75,0.12)" stroke="rgba(229,160,75,0.2)" stroke-width="1.5"/>
+                <path d="M160 140 Q210 110 260 55" stroke="rgba(229,160,75,0.25)" stroke-width="2" stroke-linecap="round" fill="none"/>
+                <path d="M253 55 H260 V62" stroke="rgba(229,160,75,0.25)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              </svg>
+            </div>
+            <div class="perfil-avatar" aria-hidden="true">EP</div>
+            <div class="perfil-sector">
+              <div class="perfil-sector-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="M9 13h6M9 17h4"></path></svg>
+              </div>
+              <span class="perfil-sector-label">Asesoría</span>
+            </div>
+            <!-- Art: Form and magic wand -->
+            <svg class="perfil-art" viewBox="0 0 140 64" fill="none" aria-hidden="true">
+              <path d="M22 4 h44 l12 12 v44 a2 2 0 0 1 -2 2 h-54 a2 2 0 0 1 -2 -2 v-54 a2 2 0 0 1 2 -2 z" fill="#fff" stroke="currentColor" stroke-opacity=".75" stroke-width="1.3"></path>
+              <path d="M66 4 v12 h12" stroke="currentColor" stroke-opacity=".75" stroke-width="1.3" fill="none"></path>
+              <text x="28" y="26" font-family="JetBrains Mono, monospace" font-size="6" font-weight="700" fill="currentColor" fill-opacity=".85">MOD. 303</text>
+              <line x1="28" y1="32" x2="42" y2="32" stroke="currentColor" stroke-opacity=".4" stroke-width="1"></line>
+              <rect x="46" y="29" width="26" height="6" rx="1" fill="rgba(46,117,182,.2)" stroke="currentColor" stroke-opacity=".5" stroke-width="0.9"></rect>
+              <line x1="48" y1="32" x2="58" y2="32" stroke="currentColor" stroke-opacity=".75" stroke-width="1"></line>
+              <line x1="28" y1="40" x2="40" y2="40" stroke="currentColor" stroke-opacity=".4" stroke-width="1"></line>
+              <rect x="46" y="37" width="26" height="6" rx="1" fill="rgba(46,117,182,.2)" stroke="currentColor" stroke-opacity=".5" stroke-width="0.9"></rect>
+              <line x1="48" y1="40" x2="62" y2="40" stroke="currentColor" stroke-opacity=".75" stroke-width="1"></line>
+              <line x1="28" y1="48" x2="44" y2="48" stroke="currentColor" stroke-opacity=".4" stroke-width="1"></line>
+              <rect x="46" y="45" width="26" height="6" rx="1" fill="rgba(46,117,182,.2)" stroke="currentColor" stroke-opacity=".5" stroke-width="0.9"></rect>
+              <line x1="48" y1="48" x2="56" y2="48" stroke="currentColor" stroke-opacity=".75" stroke-width="1"></line>
+              <path d="M114 22 l5 5 l-22 22 l-5 -5 z" fill="rgba(46,117,182,.2)" stroke="currentColor" stroke-opacity=".8" stroke-width="1.3" stroke-linejoin="round"></path>
+              <line x1="111" y1="25" x2="116" y2="30" stroke="currentColor" stroke-opacity=".8" stroke-width="1.2"></line>
+              <path d="M122 10 l1 3 l3 1 l-3 1 l-1 3 l-1 -3 l-3 -1 l3 -1 z" fill="currentColor" fill-opacity=".6"></path>
+              <path d="M132 22 l.7 2.2 l2.2 .7 l-2.2 .7 l-.7 2.2 l-.7 -2.2 l-2.2 -.7 l2.2 -.7 z" fill="currentColor" fill-opacity=".55"></path>
+              <path d="M124 50 l.7 2 l2 .7 l-2 .7 l-.7 2 l-.7 -2 l-2 -.7 l2 -.7 z" fill="currentColor" fill-opacity=".55"></path>
+            </svg>
+          </div>
+          <div class="perfil-body">
+            <span class="perfil-role">Gerente · asesoría fiscal</span>
+            <h3 class="perfil-name">Elena P. — 3 empleados</h3>
+            <p class="perfil-quote">"Los modelos trimestrales se pre-rellenarían solos con los datos de cada cliente. Yo solo revisaría y firmaría."</p>
+            <div class="perfil-stat">
+              <div class="ic">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path></svg>
+              </div>
+              <div>
+                <div class="pct">~-78% <span class="pct-est">est.</span></div>
+                <div class="desc">tiempo en modelos trimestrales · ~2.2h/día liberadas</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ROBERTO · DISTRIBUIDORA -->
+        <article class="perfil-card card-distribucion reveal" data-delay="3">
+          <div class="perfil-illu">
+            <!-- Background Context Graphics -->
+            <div class="perfil-bg-context">
+              <svg viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="5" fill="rgba(37,211,102,0.3)" class="pulse-dot"/>
+                <circle cx="50" cy="50" r="10" stroke="rgba(37,211,102,0.15)" stroke-width="1"/>
+                <circle cx="270" cy="60" r="6" fill="rgba(37,211,102,0.3)" class="pulse-dot"/>
+                <circle cx="270" cy="60" r="12" stroke="rgba(37,211,102,0.15)" stroke-width="1"/>
+                <circle cx="140" cy="140" r="4" fill="rgba(37,211,102,0.25)"/>
+                <circle cx="210" cy="130" r="5" fill="rgba(37,211,102,0.3)" class="pulse-dot"/>
+                <path d="M50 50 Q160 30 270 60" stroke="rgba(37,211,102,0.15)" stroke-width="1.5" stroke-dasharray="4 4"/>
+                <path d="M50 50 Q90 100 140 140" stroke="rgba(37,211,102,0.12)" stroke-width="1.5"/>
+                <path d="M140 140 H210" stroke="rgba(37,211,102,0.15)" stroke-width="1.5"/>
+                <path d="M210 130 Q240 95 270 60" stroke="rgba(37,211,102,0.18)" stroke-width="1.5" stroke-dasharray="4 4"/>
+                <circle cx="0" cy="0" r="3" fill="#25D366">
+                  <animateMotion dur="6s" repeatCount="indefinite" path="M50 50 Q160 30 270 60" />
+                </circle>
+                <circle cx="0" cy="0" r="3" fill="#25D366">
+                  <animateMotion dur="4s" repeatCount="indefinite" path="M140 140 H210" />
+                </circle>
+              </svg>
+            </div>
+            <div class="perfil-avatar" aria-hidden="true">RG</div>
+            <div class="perfil-sector">
+              <div class="perfil-sector-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h13l5 5v5h-2M1 7v10h2"></path><circle cx="7" cy="17" r="2"></circle><circle cx="17" cy="17" r="2"></circle></svg>
+              </div>
+              <span class="perfil-sector-label">Distribución</span>
+            </div>
+            <!-- Art: Chat and ERP sync -->
+            <svg class="perfil-art" viewBox="0 0 140 64" fill="none" aria-hidden="true">
+              <path d="M6 18 a8 8 0 0 1 8 -8 h28 a8 8 0 0 1 8 8 v12 a8 8 0 0 1 -8 8 h-4 l-7 7 v-7 h-17 a8 8 0 0 1 -8 -8 z" fill="#fff" stroke="currentColor" stroke-opacity=".75" stroke-width="1.3"></path>
+              <line x1="14" y1="20" x2="40" y2="20" stroke="currentColor" stroke-opacity=".55" stroke-width="1.2" stroke-linecap="round"></line>
+              <line x1="14" y1="26" x2="36" y2="26" stroke="currentColor" stroke-opacity=".4" stroke-width="1.2" stroke-linecap="round"></line>
+              <line x1="14" y1="32" x2="32" y2="32" stroke="currentColor" stroke-opacity=".4" stroke-width="1.2" stroke-linecap="round"></line>
+              <path d="M62 30 h14 M72 26 l4 4 l-4 4" stroke="currentColor" stroke-opacity=".75" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+              <ellipse cx="104" cy="14" rx="18" ry="5" fill="#fff" stroke="currentColor" stroke-opacity=".75" stroke-width="1.3"></ellipse>
+              <path d="M86 14 v30 a18 5 0 0 0 36 0 v-30" stroke="currentColor" stroke-opacity=".75" stroke-width="1.3" fill="#fff" fill-opacity=".7"></path>
+              <path d="M86 24 a18 5 0 0 0 36 0" stroke="currentColor" stroke-opacity=".5" stroke-width="1" fill="none"></path>
+              <path d="M86 34 a18 5 0 0 0 36 0" stroke="currentColor" stroke-opacity=".5" stroke-width="1" fill="none"></path>
+              <circle cx="104" cy="56" r="6" fill="rgba(56,161,105,.18)" stroke="rgba(56,161,105,.95)" stroke-width="1.3"></circle>
+              <path d="M101 56.5 l2.2 2.2 l3.8 -3.8" stroke="rgba(56,161,105,1)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+            </svg>
+          </div>
+          <div class="perfil-body">
+            <span class="perfil-role">Responsable de operaciones</span>
+            <h3 class="perfil-name">Roberto G. — 7 empleados</h3>
+            <p class="perfil-quote">"Los pedidos por WhatsApp entrarían al ERP solos. Antes los pasábamos a mano uno por uno y se nos colaban errores."</p>
+            <div class="perfil-stat">
+              <div class="ic">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h13l5 5v5h-2M1 7v10h2"></path><circle cx="7" cy="17" r="2"></circle><circle cx="17" cy="17" r="2"></circle></svg>
+              </div>
+              <div>
+                <div class="pct">~-85% <span class="pct-est">est.</span></div>
+                <div class="desc">entrada manual de pedidos · ~2h/día liberadas</div>
+              </div>
+            </div>
+          </div>
+        </article>
+        </div>
+        <!-- Slider Controls -->
+        <div class="perfil-carousel-controls">
+          <button class="carousel-nav-btn prev" aria-label="Tarjeta anterior">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="carousel-dots">
+            <span class="carousel-dot active" data-index="0"></span>
+            <span class="carousel-dot" data-index="1"></span>
+            <span class="carousel-dot" data-index="2"></span>
+            <span class="carousel-dot" data-index="3"></span>
+            <span class="carousel-dot" data-index="4"></span>
+            <span class="carousel-dot" data-index="5"></span>
+          </div>
+          <button class="carousel-nav-btn next" aria-label="Tarjeta siguiente">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ IMPACTO REAL / CHARTS ============ -->
+  <section class="proof alt" id="impacto">
+    <div class="container">
+      <div class="head reveal">
+        <span class="eyebrow">// Resultados medibles</span>
+        <h2>Impacto real en <span class="ac">tiempo y eficiencia.</span></h2>
+        <p>Métricas típicas sobre implantaciones en PYMEs españolas. Datos comparativos antes y después de implementar Polaris AI.</p>
+      </div>
+
+      <!-- KPIs -->
+      <div class="kpi-grid">
+        <div class="kpi-card reveal" data-delay="1">
+          <div class="kpi-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="13" r="8"></circle><path d="M12 9v4l2 2M12 3v2"></path></svg>
+          </div>
+          <div class="kpi-value">73%</div>
+          <div class="kpi-label">Reducción tiempo en gestión manual</div>
+          <div class="kpi-foot"><span class="up">↑</span> +18pp vs mes anterior</div>
+        </div>
+        <div class="kpi-card reveal" data-delay="2">
+          <div class="kpi-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path></svg>
+          </div>
+          <div class="kpi-value">12s</div>
+          <div class="kpi-label">Tiempo medio por factura procesada</div>
+          <div class="kpi-foot"><span class="down">↓</span> Antes: 8 minutos</div>
+        </div>
+        <div class="kpi-card reveal" data-delay="3">
+          <div class="kpi-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+          </div>
+          <div class="kpi-value">91%</div>
+          <div class="kpi-label">Reducción errores de extracción OCR</div>
+          <div class="kpi-foot"><span class="up">↑</span> +12pp en mes 6</div>
+        </div>
+        <div class="kpi-card reveal" data-delay="4">
+          <div class="kpi-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg>
+          </div>
+          <div class="kpi-value">2.4h</div>
+          <div class="kpi-label">Horas/día liberadas por empleado</div>
+          <div class="kpi-foot"><span class="up">↑</span> ROI positivo en mes 3</div>
+        </div>
+      </div>
+
+      <!-- Charts -->
+      <div class="charts-grid">
+        <div class="chart-card reveal">
+          <h3 class="chart-title">Tiempo por tarea (horas/semana)</h3>
+          <p class="chart-sub">Antes vs Después de implementar Polaris AI</p>
+          <div class="chart-canvas-wrap"><canvas id="chart-bars"></canvas></div>
+        </div>
+        <div class="chart-card reveal" data-delay="1">
+          <h3 class="chart-title">Evolución del ahorro de tiempo (%)</h3>
+          <p class="chart-sub">Primeros 6 meses tras implantación</p>
+          <div class="chart-canvas-wrap"><canvas id="chart-line"></canvas></div>
+        </div>
+        <div class="chart-card reveal">
+          <h3 class="chart-title">Distribución del tiempo ahorrado</h3>
+          <p class="chart-sub">Por área de actividad (% del total)</p>
+          <div class="donut-wrap">
+            <div class="donut-center">
+              <canvas id="chart-donut" width="200" height="200"></canvas>
+              <div class="donut-num"><div><strong>73%</strong><span>Ahorro</span></div></div>
+            </div>
+            <ul class="donut-legend" id="donut-legend">
+              <!-- Cargado dinámicamente -->
+            </ul>
+          </div>
+        </div>
+        <div class="chart-card reveal" data-delay="1">
+          <h3 class="chart-title">Polaris AI vs Alternativas</h3>
+          <p class="chart-sub">Puntuación por criterio clave para PYMEs (0–100)</p>
+          <div class="chart-canvas-wrap" style="min-height: 260px;"><canvas id="chart-hbars"></canvas></div>
+          <div style="margin-top: 12px; display:flex; gap:18px; flex-wrap:wrap; font-family:'JetBrains Mono', monospace; font-size:.72rem; color:var(--fg-muted);">
+            <span><span style="display:inline-block;width:10px;height:10px;background:#1B3A6B;border-radius:2px;vertical-align:middle;margin-right:6px;"></span>Polaris AI</span>
+            <span><span style="display:inline-block;width:10px;height:10px;background:#94A0B6;border-radius:2px;vertical-align:middle;margin-right:6px;"></span>Copilot 365</span>
+            <span><span style="display:inline-block;width:10px;height:10px;background:#CBD5E0;border-radius:2px;vertical-align:middle;margin-right:6px;"></span>ChatGPT Team</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPARATIVA ============ -->
+  <section class="proof" id="comparativa">
+    <div class="container">
+      <div class="head reveal">
+        <span class="eyebrow">// Comparativa</span>
+        <h2>Polaris AI vs <span class="ac">alternativas cloud.</span></h2>
+        <p>¿Por qué una PYME elegiría IA local frente a Copilot 365 o ChatGPT Team?</p>
+      </div>
+
+      <div class="compare-wrap reveal">
+        <table class="compare">
+          <thead>
+            <tr>
+              <th>Característica</th>
+              <th class="col-polaris">Polaris AI</th>
+              <th>Microsoft Copilot 365</th>
+              <th>ChatGPT Team</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Datos salen de la empresa</td>
+              <td class="col-polaris">Nunca</td>
+              <td class="neg">Sí, a servidores MS</td>
+              <td class="neg">Sí, a OpenAI</td>
+            </tr>
+            <tr>
+              <td>Cumplimiento RGPD por diseño</td>
+              <td class="col-polaris"><span class="check">Nativo</span></td>
+              <td class="neg">Depende configuración</td>
+              <td class="neg">Depende configuración</td>
+            </tr>
+            <tr>
+              <td>Coste por 15 usuarios/mes</td>
+              <td class="col-polaris">199 € fijo</td>
+              <td class="neg">~450 € (30 €/user)</td>
+              <td class="neg">~375 € (25 €/user)</td>
+            </tr>
+            <tr>
+              <td>Funciona sin internet</td>
+              <td class="col-polaris"><span class="check">Siempre</span></td>
+              <td class="neg"><span class="cross">Requiere conexión</span></td>
+              <td class="neg"><span class="cross">Requiere conexión</span></td>
+            </tr>
+            <tr>
+              <td>Integración ERP español (Sage, A3)</td>
+              <td class="col-polaris"><span class="check">Nativa</span></td>
+              <td class="muted">Limitada</td>
+              <td class="neg">No</td>
+            </tr>
+            <tr>
+              <td>Automatización WhatsApp</td>
+              <td class="col-polaris"><span class="check">Nativa</span></td>
+              <td class="neg">No</td>
+              <td class="neg">No</td>
+            </tr>
+            <tr>
+              <td>Aprende del comportamiento de la empresa</td>
+              <td class="col-polaris"><span class="check">Módulo Reflexivo</span></td>
+              <td class="neg">No</td>
+              <td class="neg">No</td>
+            </tr>
+            <tr>
+              <td>Vendor lock-in</td>
+              <td class="col-polaris">Ninguno · open source</td>
+              <td class="neg">Alto</td>
+              <td class="neg">Alto</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-foot reveal">// Precios de competidores estimados a mayo 2026. Consultar webs oficiales para pricing actualizado.</p>
+    </div>
+  </section>
+
+  <!-- ============ CALCULADORA ROI ============ -->
+  <section class="proof alt roi-section" id="roi">
+    <div class="container">
+      <div class="head reveal" style="text-align:left; align-items:flex-start; margin: 0 0 56px;">
+        <span class="eyebrow">// Calculadora de ROI</span>
+        <h2>¿Cuánto te cuesta <span class="ac">no tenerlo?</span></h2>
+        <p>Ajusta los parámetros de tu empresa y ve en tiempo real el coste oculto del trabajo mecánico y el retorno de la inversión.</p>
+      </div>
+
+      <div class="roi-grid">
+        <!-- Controls -->
+        <div class="roi-controls reveal">
+          <div class="roi-slider" data-min="1" data-max="50">
+            <div class="roi-slider-head">
+              <span class="roi-slider-label">Empleados en tareas mecánicas</span>
+              <span class="roi-slider-value" id="roi-empleados-v">4</span>
+            </div>
+            <p class="roi-slider-hint">Contabilidad, almacén, administración, atención al cliente</p>
+            <input id="roi-empleados" type="range" min="1" max="50" step="1" value="4">
+          </div>
+
+          <div class="roi-slider" data-unit="h">
+            <div class="roi-slider-head">
+              <span class="roi-slider-label">Horas / semana por empleado</span>
+              <span class="roi-slider-value"><span id="roi-horas-v">6</span><span class="u">h</span></span>
+            </div>
+            <p class="roi-slider-hint">Clasificar facturas, copiar datos, generar informes, responder consultas repetidas</p>
+            <input id="roi-horas" type="range" min="1" max="20" step="1" value="6">
+          </div>
+
+          <div class="roi-slider" data-unit="€">
+            <div class="roi-slider-head">
+              <span class="roi-slider-label">Coste bruto por hora</span>
+              <span class="roi-slider-value"><span id="roi-coste-v">18</span><span class="u">€</span></span>
+            </div>
+            <p class="roi-slider-hint">Salario bruto anual ÷ 1.750 h · Media PYME española: 16–22 €/h</p>
+            <input id="roi-coste" type="range" min="10" max="40" step="1" value="18">
+          </div>
+
+          <div class="roi-slider" data-unit="%">
+            <div class="roi-slider-head">
+              <span class="roi-slider-label">% automatizable por Polaris AI</span>
+              <span class="roi-slider-value"><span id="roi-auto-v">70</span><span class="u">%</span></span>
+            </div>
+            <p class="roi-slider-hint">Estimación conservadora: 60–80 % para tareas documentales y consultas repetidas</p>
+            <input id="roi-auto" type="range" min="40" max="90" step="5" value="70">
+          </div>
+
+          <div class="roi-plan-title">Plan Polaris AI</div>
+          <div class="roi-plans" role="radiogroup">
+            <button class="roi-plan" data-plan="essential" data-mensual="79" data-setup="800" type="button" role="radio">
+              <span class="plan-name">Essential Scout</span>
+              <span class="plan-meta">79 €/mes · setup 800 €</span>
+            </button>
+            <button class="roi-plan active" data-plan="business" data-mensual="199" data-setup="1800" type="button" role="radio" aria-checked="true">
+              <span class="plan-name">Business Agent</span>
+              <span class="plan-meta">199 €/mes · setup 1.800 €</span>
+            </button>
+            <button class="roi-plan" data-plan="enterprise" data-mensual="349" data-setup="3200" type="button" role="radio">
+              <span class="plan-name">Enterprise Guardian</span>
+              <span class="plan-meta">349 €/mes · setup 3.200 €</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Results -->
+        <div class="roi-results reveal" data-delay="1">
+          <div class="roi-result-big dim">
+            <div class="label">Coste actual / mes (trabajo mecánico)</div>
+            <div class="val"><span id="r-cost-mes">0<span class="u"> €</span></span></div>
+          </div>
+          <div class="roi-result-big pos">
+            <div class="label">Ahorro mensual con Polaris AI</div>
+            <div class="val"><span id="r-ahorro-mes">0<span class="u"> €</span></span></div>
+          </div>
+          <div class="roi-result-big pos">
+            <div class="label">ROI mensual neto (ahorro − cuota)</div>
+            <div class="val"><span id="r-roi-mes">0<span class="u"> €</span></span></div>
+          </div>
+
+          <div class="roi-breakdown">
+            <dl>
+              <div class="row"><dt>Coste trabajo mecánico / año</dt><dd id="r-cost-anual">0 €</dd></div>
+              <div class="row"><dt>Ahorro bruto anual</dt><dd id="r-ahorro-anual">0 €</dd></div>
+              <div class="row"><dt>Cuota anual Polaris AI</dt><dd id="r-cuota-anual">0 €</dd></div>
+              <div class="row"><dt>Setup (amortizado 3 años)</dt><dd id="r-setup">0 €</dd></div>
+              <div class="row highlight"><dt>Beneficio neto año 1</dt><dd id="r-beneficio">0 €</dd></div>
+              <div class="row highlight"><dt>Payback (meses)</dt><dd id="r-payback">0 meses</dd></div>
+            </dl>
+          </div>
+
+          <div class="roi-callout" id="r-callout">
+            Cargando estimación de ROI...
+          </div>
+
+          <!-- Redirección dinámica a WhatsApp -->
+          <a href="#" class="roi-cta" target="_blank">
+            Solicitar diagnóstico con estos datos por WhatsApp
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRECIOS ============ -->
+  <section class="pricing" id="precios">
+    <div class="container">
+      <div class="section-head reveal" style="display:flex; flex-direction:column; align-items:center; text-align:center; max-width:760px; margin-left:auto; margin-right:auto;">
+        <span class="eyebrow">// PRECIOS</span>
+        <h2>Una inversión predecible. Para siempre.</h2>
+        <p>Hardware + setup único + licencia mensual fija. Sin cuotas por consulta, sin cargos por usuario adicional dentro del plan. La diferencia con la nube se paga sola entre el primer y el cuarto mes.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <article class="plan reveal" data-delay="1">
+          <span class="plan-name">Essential</span>
+          <p class="plan-desc">Para equipos de 5–10 personas que arrancan con un caso de uso clave.</p>
+          <div class="price">
+            <span class="amount">297€</span>
+            <span class="per">/ mes</span>
+          </div>
+          <span class="setup">// setup único · 500–800€</span>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> 1 caso de uso a medida</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Hasta 10 usuarios activos</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> RAG sobre 1 fuente documental</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Soporte estándar 8×5</li>
+          </ul>
+          <a href="https://wa.me/34602025877?text=Hola%20Polaris%20AI%2C%20me%20interesa%20el%20plan%20Essential%20de%20297%E2%82%AC%2Fmes." class="btn btn-secondary" target="_blank">Empezar con Essential</a>
+        </article>
+
+        <article class="plan popular reveal" data-delay="2">
+          <span class="plan-tag">// más popular</span>
+          <span class="plan-name">Business</span>
+          <p class="plan-desc">El plan elegido por la mayoría de PYMEs de 10–25 empleados con varios procesos automatizables.</p>
+          <div class="price">
+            <span class="amount">597€</span>
+            <span class="per">/ mes</span>
+          </div>
+          <span class="setup">// setup único · 800–1.000€ + 100€/empleado</span>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> 3 casos de uso · WhatsApp incluido</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Hasta 25 usuarios activos</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> RAG multifuente · conectores ERP/CRM</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Plantillas de sector incluidas</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Soporte prioritario 12×5</li>
+          </ul>
+          <a href="https://wa.me/34602025877?text=Hola%20Polaris%20AI%2C%20me%20interesa%20el%20plan%20Business%20de%20597%E2%82%AC%2Fmes." class="btn btn-primary" target="_blank">Solicitar demo Business</a>
+        </article>
+
+        <article class="plan reveal" data-delay="3">
+          <span class="plan-name">Enterprise</span>
+          <p class="plan-desc">Para organizaciones con cumplimiento reforzado y múltiples departamentos.</p>
+          <div class="price">
+            <span class="amount">997€</span>
+            <span class="per">/ mes</span>
+          </div>
+          <span class="setup">// setup único · 1.200€ + 150€/empleado</span>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Casos de uso ilimitados</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Hasta 50 usuarios · multidepartamento</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Fine-tuning sobre tu corpus</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Auditoría RGPD · ISO 27001 trail</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"></path></svg> Soporte dedicado 24×5 + SLA</li>
+          </ul>
+          <a href="https://wa.me/34602025877?text=Hola%20Polaris%20AI%2C%20quisi%C3%A9ramos%20solicitar%20informaci%C3%B3n%20sobre%20el%20plan%20Enterprise." class="btn btn-secondary" target="_blank">Hablar con ventas</a>
+        </article>
+      </div>
+
+      <p class="reveal" data-delay="4" style="text-align:center; margin-top:36px; font-family:'JetBrains Mono', monospace; font-size:0.78rem; letter-spacing:0.08em; color:var(--fg-muted);">
+        // calculadora de ROI disponible en <a href="#roi" style="color:var(--accent-2);">/roi</a> · sin permanencia · cancela cuando quieras
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ DEMO CTA ============ -->
+  <section class="demo-cta" id="demo">
+    <div class="container">
+      <div class="demo-cta-grid">
+        <div class="reveal">
+          <span class="eyebrow">// DEMO PRIVADA</span>
+          <h2 style="margin-top:14px;">Vemos juntos Polaris AI sobre <em style="font-style:normal; color:var(--polaris-light-blue);">tu</em> caso de uso real.</h2>
+          <p style="margin-top:18px;">
+            Una sesión de 30 minutos. Te mostramos el agente funcionando con documentos parecidos a los tuyos,
+            calculamos contigo el ROI y dejamos claro qué hardware necesitarías. Sin compromiso, sin guion comercial.
+          </p>
+          <div class="actions">
+            <a href="https://wa.me/34602025877?text=Hola%20Polaris%20AI%2C%20me%20gustar%C3%ADa%20reservar%20mi%20slot%20de%20demo%20de%2030%20minutos." class="btn btn-primary" target="_blank">
+              Reservar demo por WhatsApp
+              <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
+            </a>
+            <a href="mailto:contacto@polaris-ai.es" class="btn btn-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4zM4 4l8 8 8-8"></path></svg>
+              contacto@polaris-ai.es
+            </a>
+          </div>
+
+          <div style="margin-top: 36px; display:flex; gap: 28px; flex-wrap: wrap; font-family:'JetBrains Mono', monospace; font-size: 0.74rem; color: rgba(255,255,255,.6); letter-spacing: 0.06em;">
+            <span>// 100% local en la demo</span>
+            <span>// sin datos compartidos con terceros</span>
+            <span>// integrador certificado</span>
+          </div>
+        </div>
+
+        <form class="demo-card reveal" data-delay="2">
+          <div class="demo-head">
+            <span class="demo-title">Solicitar demo gratuita</span>
+            <span class="demo-status"><span class="pulse"></span>Slots esta semana · 3</span>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-name">Nombre</label>
+              <input id="f-name" type="text" placeholder="María García" required>
+            </div>
+            <div class="field">
+              <label for="f-empresa">Empresa</label>
+              <input id="f-empresa" type="text" placeholder="Asesoría García SL" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-email">Email corporativo</label>
+            <input id="f-email" type="email" placeholder="maria@asesoria-garcia.es" required>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-sector">Sector</label>
+              <select id="f-sector">
+                <option>Gestoría / Asesoría</option>
+                <option>Clínica / Salud</option>
+                <option>Despacho legal</option>
+                <option>Logística / Distribución</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-empleados">Nº empleados</label>
+              <select id="f-empleados">
+                <option>1–5</option>
+                <option selected>5–25</option>
+                <option>25–50</option>
+                <option>50+</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn submit">
+            Reservar demo en WhatsApp
+            <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
+          </button>
+          <p class="legal">// Redirecciona a WhatsApp con tus datos pre-rellenados. Cero spam.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section id="faq">
+    <div class="container">
+      <div class="faq-grid">
+        <div class="reveal">
+          <span class="eyebrow">// PREGUNTAS FRECUENTES</span>
+          <h2 style="margin-top:14px;">Lo que más nos preguntan los responsables de PYMEs.</h2>
+          <p style="margin-top:18px;">Si tu duda no aparece aquí, escríbenos a contacto@polaris-ai.es o llámanos al +34 602 02 58 77.</p>
+          <a href="https://wa.me/34602025877?text=Hola%20Polaris%20AI%2C%20tengo%20una%20pregunta." class="btn btn-primary" style="margin-top: 28px;" target="_blank">
+            Hablar con un integrador
+            <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
+          </a>
+        </div>
+
+        <div class="faq-list reveal" data-delay="2">
+          <div class="faq-item open">
+            <button class="faq-q">¿Realmente nada de mis datos sale de mi empresa?<span class="plus" aria-hidden="true">+</span></button>
+            <div class="faq-a">Correcto. Polaris AI se instala en hardware que vive en tu red — un servidor on-prem o una máquina virtual privada. Ni los prompts, ni los documentos, ni los resultados viajan a internet en ningún momento. Puedes auditar el tráfico de salida y comprobarlo tú mismo.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">No tenemos equipo de IT. ¿Podemos hacerlo igualmente?<span class="plus" aria-hidden="true">+</span></button>
+            <div class="faq-a">Sí. El integrador certificado se encarga de instalación, configuración, formación y soporte continuo en España. En el plan Business típicamente la puesta en marcha completa toma 48 horas y la formación 2 sesiones de 1 hora.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">¿Qué pasa cuando aparece un modelo mejor que el actual?<span class="plus" aria-hidden="true">+</span></button>
+            <div class="faq-a">Te lo actualizamos. Tu hardware y tu corpus se mantienen; sólo cambia el motor. Forma parte de la licencia mensual sin coste adicional.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">¿Cómo se compara con ChatGPT Enterprise o Copilot 365?<span class="plus" aria-hidden="true">+</span></button>
+            <div class="faq-a">A nivel capacidades brutas los tres son comparables hoy. La diferencia es de modelo de negocio y de riesgo: ChatGPT y Copilot cobran por token y procesan tus datos en sus servidores. Polaris AI tiene tarifa plana y vive en los tuyos.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">¿Cuánto cuesta el hardware? ¿Lo ponéis vosotros?<span class="plus" aria-hidden="true">+</span></button>
+            <div class="faq-a">Depende del tamaño de la empresa. Para 5–25 empleados un servidor adecuado ronda los 4.000–8.000€ (inversión única). Te acompañamos en la elección y compra; en planes Enterprise podemos suministrarlo nosotros llave en mano.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">¿Hay permanencia? ¿Cláusulas raras en el contrato?<span class="plus" aria-hidden="true">+</span></button>
+            <div class="faq-a">Ninguna. Mes a mes, cancelas cuando quieras. Si lo cancelas, tu hardware y tu corpus se quedan contigo: el software puede seguir corriendo en modo offline, sin actualizaciones.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="brand">
+          <span class="logo-mark"><img src="./logo.jpg" alt="Polaris AI Logo Mark"></span>
+          <span class="brand-name">
+            <span class="name">Polaris AI</span>
+            <span class="tag">Agentic · Local · Private · Trusted</span>
+          </span>
+        </div>
+        <p class="blurb">IA agéntica B2B on-premise para PYMEs que no pueden — o no quieren — subir sus datos a la nube.</p>
+        <div style="margin-top: 18px; font-family:'JetBrains Mono', monospace; font-size:0.72rem; letter-spacing:0.08em; color: rgba(255,255,255,.45);">
+          // Polaris AI · Madrid · España<br>
+          // Tlf: +34 602 02 58 77
+        </div>
+      </div>
+
+      <div>
+        <h4>Producto</h4>
+        <ul>
+          <li><a href="#que-es">¿Qué es Polaris AI?</a></li>
+          <li><a href="#como-funciona">Cómo funciona</a></li>
+          <li><a href="#precios">Planes y precios</a></li>
+          <li><a href="#demo">Solicitar demo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Soluciones</h4>
+        <ul>
+          <li><a href="#como-funciona">Facturas automáticas</a></li>
+          <li><a href="#como-funciona">Documentos internos · RAG</a></li>
+          <li><a href="#como-funciona">WhatsApp y pedidos</a></li>
+          <li><a href="#como-funciona">Informes ejecutivos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Sectores</h4>
+        <ul>
+          <li><a href="#sectores">Gestorías</a></li>
+          <li><a href="#sectores">Clínicas</a></li>
+          <li><a href="#sectores">Despachos legales</a></li>
+          <li><a href="#sectores">Logística</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#demo">Sobre nosotros</a></li>
+          <li><a href="#demo">Conviértete en integrador</a></li>
+          <li><a href="#demo">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 POLARIS AI · TODOS LOS DERECHOS RESERVADOS</span>
+      <span>
+        <a href="./politica-privacidad.html">PRIVACIDAD</a> &nbsp;·&nbsp;
+        <a href="./politica-cookies.html">COOKIES</a> &nbsp;·&nbsp;
+        <a href="#">TÉRMINOS</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ TWEAKS PANEL ============ -->
+<div id="tweaks" role="dialog" aria-label="Tweaks">
+  <h5>
+    Tweaks
+    <button id="twk-close" aria-label="Cerrar">×</button>
+  </h5>
+
+  <div class="twk-row">
+    <span class="twk-label">Tema</span>
+    <div class="twk-seg" data-twk="theme">
+      <button data-val="light" class="active">Claro</button>
+      <button data-val="dark">Oscuro</button>
+    </div>
+  </div>
+
+  <div class="twk-row">
+    <span class="twk-label">Color primario</span>
+    <div class="twk-swatches" data-twk="accent">
+      <button class="twk-swatch" data-val="navy" style="background:#1B3A6B" title="Navy"></button>
+      <button class="twk-swatch" data-val="blue" style="background:#2E75B6" title="Blue"></button>
+      <button class="twk-swatch active" data-val="electric" style="background:#3B9AFF" title="Electric"></button>
+    </div>
+  </div>
+
+  <div class="twk-row">
+    <span class="twk-label">Hero — orbital</span>
+    <div class="twk-toggle">
+      <span style="font-size:.82rem; color: var(--fg-muted);">Anillos animados</span>
+      <input type="checkbox" id="twk-orbit" checked>
+    </div>
+  </div>
+
+  <div class="twk-row">
+    <span class="twk-label">Fondo del Hero</span>
+    <div class="twk-seg" data-twk="herobg">
+      <button data-val="dots">Dot grid</button>
+      <button data-val="aurora">Aurora</button>
+      <button data-val="plain" class="active">Limpio</button>
+    </div>
+  </div>
+</div>
+
+<!-- Floating WhatsApp Button (GEO & Direct Contact) -->
+<a href="https://wa.me/34602025877?text=Hola%20Polaris%20AI%2C%20querr%C3%ADa%20hacer%20una%20consulta%20directa." class="whatsapp-float" target="_blank" aria-label="Iniciar chat de WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.504-5.729-1.465L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.97-1.861-1.868-4.339-2.897-6.972-2.899-5.437 0-9.862 4.37-9.866 9.801-.001 1.836.52 3.578 1.503 5.114l-.988 3.606 3.733-.968zM17.65 14.59c-.31-.155-1.826-.9-2.107-1.002-.281-.103-.485-.155-.688.155-.203.31-.786.983-.965 1.19-.18.207-.359.233-.668.078-1.502-.752-2.585-1.309-3.628-3.102-.275-.472.275-.438.788-1.464.086-.172.043-.322-.021-.453-.064-.131-.485-1.169-.664-1.6-.174-.42-.365-.362-.504-.369-.13-.007-.28-.007-.43-.007-.15 0-.395.056-.601.281-.206.225-.788.77-0.788 1.878 0 1.108.807 2.179.919 2.332.112.155 1.588 2.426 3.847 3.4c.538.232.957.371 1.283.475.54.171 1.03.147 1.417.09.431-.064 1.826-.747 2.083-1.468.257-.721.257-1.34.181-1.468-.076-.129-.281-.207-.591-.362z"/>
+  </svg>
+</a>
+
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
+  <div class="cookie-banner-inner">
+    <p>Utilizamos cookies propias y de terceros para optimizar la experiencia de navegación en nuestra web. Al continuar navegando entendemos que aceptas su uso. Puedes leer más detalles en nuestra <a href="./politica-cookies.html">Política de Cookies</a>.</p>
+    <div class="cookie-buttons">
+      <button id="btn-reject-cookies" class="btn btn-secondary btn-sm">Rechazar</button>
+      <button id="btn-accept-cookies" class="btn btn-primary btn-sm">Aceptar todas</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
