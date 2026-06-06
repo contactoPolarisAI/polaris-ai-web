@@ -1449,11 +1449,18 @@
               </select>
             </div>
           </div>
-          <button type="submit" class="btn submit">
-            Reservar demo en WhatsApp
+          <div class="field" style="flex-direction: row; align-items: flex-start; gap: 8px; margin-top: 8px; margin-bottom: 16px;">
+            <input type="checkbox" id="f-consent" required style="width: auto; margin-top: 3px; cursor: pointer;">
+            <label for="f-consent" style="font-family: inherit; font-size: 0.76rem; color: rgba(255,255,255,.85); text-transform: none; letter-spacing: normal; cursor: pointer; line-height: 1.4;">
+              He leído y acepto la <a href="./politica-privacidad.html" target="_blank" style="color: var(--polaris-blue-bright); text-decoration: underline;">Política de Privacidad</a>.
+            </label>
+          </div>
+          <button type="submit" id="btn-submit-demo" class="btn submit">
+            Solicitar demo gratuita
             <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
           </button>
-          <p class="legal">// Redirecciona a WhatsApp con tus datos pre-rellenados. Cero spam.</p>
+          <div id="demo-form-status" style="margin-top: 12px; font-size: 0.88rem; font-weight: 500; display: none;"></div>
+          <p class="legal">// Enviaremos la propuesta por email. O si lo prefieres, puedes <a href="https://wa.me/34602025877?text=Hola%20Polaris%20AI%2C%20me%20gustar%C3%ADa%20solicitar%20una%20demo%20privada." target="_blank" style="color: #fff; text-decoration: underline;">reservarla por WhatsApp</a>.</p>
         </form>
       </div>
     </div>
@@ -1535,19 +1542,19 @@
       <div>
         <h4>Soluciones</h4>
         <ul>
-          <li><a href="#como-funciona">Facturas automáticas</a></li>
-          <li><a href="#como-funciona">Documentos internos · RAG</a></li>
-          <li><a href="#como-funciona">WhatsApp y pedidos</a></li>
-          <li><a href="#como-funciona">Informes ejecutivos</a></li>
+          <li><a href="./soluciones-facturas.html">Facturas automáticas</a></li>
+          <li><a href="./soluciones-rag.html">Documentos internos · RAG</a></li>
+          <li><a href="./soluciones-whatsapp.html">WhatsApp y pedidos</a></li>
+          <li><a href="./soluciones-informes.html">Informes ejecutivos</a></li>
         </ul>
       </div>
       <div>
         <h4>Sectores</h4>
         <ul>
-          <li><a href="#sectores">Gestorías</a></li>
-          <li><a href="#sectores">Clínicas</a></li>
-          <li><a href="#sectores">Despachos legales</a></li>
-          <li><a href="#sectores">Logística</a></li>
+          <li><a href="./sector-gestorias.html">Gestorías</a></li>
+          <li><a href="./sector-clinicas.html">Clínicas</a></li>
+          <li><a href="./sector-despachos.html">Despachos legales</a></li>
+          <li><a href="./sector-logistica.html">Logística</a></li>
         </ul>
       </div>
       <div>

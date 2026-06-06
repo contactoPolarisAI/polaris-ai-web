@@ -16,7 +16,11 @@ export default defineConfig({
         gestorias: resolve(__dirname, 'sector-gestorias.html'),
         clinicas: resolve(__dirname, 'sector-clinicas.html'),
         despachos: resolve(__dirname, 'sector-despachos.html'),
-        logistica: resolve(__dirname, 'sector-logistica.html')
+        logistica: resolve(__dirname, 'sector-logistica.html'),
+        solucionesFacturas: resolve(__dirname, 'soluciones-facturas.html'),
+        solucionesRag: resolve(__dirname, 'soluciones-rag.html'),
+        solucionesWhatsapp: resolve(__dirname, 'soluciones-whatsapp.html'),
+        solucionesInformes: resolve(__dirname, 'soluciones-informes.html')
       }
     }
   },

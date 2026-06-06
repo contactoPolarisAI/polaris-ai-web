@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automatización de WhatsApp y Pedidos | Polaris AI</title>
+  <meta name="description" content="Atiende a tus clientes, agenda citas y recibe pedidos por WhatsApp sincronizando la información automáticamente con tu ERP local de forma privada.">
+  <link rel="icon" type="image/jpg" href="./logo.jpg">
+  <link rel="canonical" href="https://polaris-ai.es/soluciones-whatsapp.html">
+  <meta property="og:url" content="https://polaris-ai.es/soluciones-whatsapp.html">
+  <meta property="og:title" content="Automatización de WhatsApp y Pedidos | Polaris AI">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://polaris-ai.es/og-image.jpg">
+  <meta property="twitter:image" content="https://polaris-ai.es/og-image.jpg">
+  
+  <!-- Estilos compartidos -->
+  <link rel="stylesheet" href="./src/styles/variables.css">
+  <link rel="stylesheet" href="./src/styles/base.css">
+  <link rel="stylesheet" href="./src/styles/components.css">
+  <link rel="stylesheet" href="./src/styles/layouts.css">
+  
+  <style>
+    .sector-content {
+      padding: 64px 0 96px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .sector-content h1 {
+      margin-bottom: 16px;
+      font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+      line-height: 1.15;
+    }
+    .sector-subtitle {
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      color: var(--fg-muted);
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 32px;
+      font-size: 0.94rem;
+      transition: color 0.2s ease;
+    }
+    .btn-back:hover {
+      color: var(--accent-2);
+    }
+    
+    /* Adaptar navbar simple */
+    .nav-simple {
+      border-bottom: 1px solid var(--border);
+      background: rgba(255,255,255,.8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    body.theme-dark .nav-simple {
+      background: rgba(11,27,54,.8);
+    }
+
+    /* Grid de características */
+    .sector-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin: 48px 0;
+    }
+    @media (max-width: 680px) {
+      .sector-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+    .sector-feat-card {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .sector-feat-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+    .sector-feat-card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--fg-muted);
+      margin: 0;
+    }
+
+    /* CTA Box */
+    .sector-cta-box {
+      background: var(--accent-soft);
+      border: 1px solid rgba(46,117,182,.2);
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+      margin-top: 56px;
+    }
+    .sector-cta-box h2 {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+      color: var(--accent);
+    }
+    .sector-cta-box p {
+      max-width: 600px;
+      margin: 0 auto 28px;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--fg-muted);
+    }
+  </style>
+
+  <!-- BreadcrumbList Schema (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://polaris-ai.es/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Soluciones",
+        "item": "https://polaris-ai.es/#como-funciona"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "WhatsApp y Pedidos",
+        "item": "https://polaris-ai.es/soluciones-whatsapp.html"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav nav-simple" id="nav">
+    <div class="container nav-inner">
+      <a href="./index.html" class="brand" aria-label="Polaris AI inicio">
+        <span class="logo-mark"><img src="./logo.jpg" alt="Polaris AI Logo"></span>
+        <span class="brand-name">
+          <span class="name">Polaris AI</span>
+          <span class="tag">Agentic · Local · Private</span>
+        </span>
+      </a>
+      <div class="nav-cta">
+        <a href="./index.html" class="btn btn-secondary btn-sm">Volver al inicio</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ CONTENIDO SOLUCIÓN ============ -->
+  <main class="container">
+    <div class="sector-content">
+      <a href="./index.html" class="btn-back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Volver a la Home
+      </a>
+      
+      <span class="eyebrow" style="margin-bottom: 12px; display: inline-block;">// SOLUCIONES CORE</span>
+      <h1>WhatsApp y pedidos automáticos</h1>
+      <p class="sector-subtitle">Atiende a tus clientes, agenda citas y recibe pedidos por WhatsApp sincronizando la información automáticamente con tu ERP local.</p>
+      
+      <h2>Convierte tu canal de WhatsApp en un asistente inteligente</h2>
+      <p>El canal de WhatsApp corporativo se ha convertido en la vía preferida de las empresas españolas para comunicarse con sus clientes y proveedores. Sin embargo, transcribir a mano pedidos informales, audios y mensajes variables satura los departamentos de administración y distribución, aumentando el tiempo de respuesta.</p>
+      
+      <p>Polaris AI conecta tu WhatsApp a un agente de inteligencia artificial local que procesa la información de forma privada e instantánea. La IA interpreta las solicitudes del chat, responde dudas comunes de stock o tarifas y precarga de forma automática los pedidos en tu ERP.</p>
+
+      <div class="sector-grid">
+        <div class="sector-feat-card">
+          <h3>Soporte automatizado 24/7</h3>
+          <p>Responde de forma inmediata y automática consultas frecuentes de clientes sobre plazos de entrega, disponibilidad de productos y estado de envíos en local.</p>
+        </div>
+        <div class="sector-feat-card">
+          <h3>Transcripción inteligente de pedidos</h3>
+          <p>Interpreta mensajes informales, audios y fotos de comandas o listados, extrayendo artículos y unidades para introducirlos de forma directa en tu software ERP.</p>
+        </div>
+        <div class="sector-feat-card">
+          <h3>Agendamiento de citas médicas</h3>
+          <p>Gestiona y confirma citas directamente sincronizando con las agendas del PMS local (en clínicas), optimizando la ocupación diaria.</p>
+        </div>
+        <div class="sector-feat-card">
+          <h3>Seguridad por diseño local</h3>
+          <p>Las conversaciones son procesadas y encriptadas en tu propio hardware local. No viajan a nubes externas de intermediarios publicitarios.</p>
+        </div>
+      </div>
+
+      <h2>Una experiencia fluida para tus clientes</h2>
+      <p>Tus clientes no notarán la diferencia. Seguirán enviando sus pedidos o consultas de la forma habitual a través de chat, pero obtendrán respuestas instantáneas y precisas. El equipo de administración de tu empresa solo tendrá que realizar la validación final del pedido precargado en pantalla, ahorrando horas diarias de trabajo mecánico.</p>
+
+      <div class="sector-cta-box">
+        <h2>¿Quieres ver el bot en acción con tu catálogo?</h2>
+        <p>Reserva una sesión técnica de 30 minutos por WhatsApp. Un integrador te mostrará cómo Polaris AI interpreta pedidos y actualiza la base de datos de manera offline y segura.</p>
+        <a href="https://wa.me/34602025877?text=Hola%20Polaris%20AI%2C%20me%20gustar%C3%ADa%20solicitar%20una%20demo%20de%20la%20soluci%C3%B3n%20de%20automatizaci%C3%B3n%20de%20WhatsApp." class="btn btn-primary" target="_blank">
+          Solicitar Demo de WhatsApp por WhatsApp
+          <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="background: var(--polaris-navy-deep); color: rgba(255,255,255,.7); padding: 48px 0 24px; font-size: 0.92rem;">
+    <div class="container">
+      <div class="footer-bottom" style="display:flex; justify-content:space-between; align-items:center; border-top: 1px solid rgba(255,255,255,.1); padding-top:22px; font-family:'JetBrains Mono', monospace; font-size:0.72rem; color: rgba(255,255,255,.45);">
+        <span>© 2026 POLARIS AI · TODOS LOS DERECHOS RESERVADOS</span>
+        <span>
+          <a href="./politica-privacidad.html" style="color:rgba(255,255,255,.7)">PRIVACIDAD</a> &nbsp;·&nbsp;
+          <a href="./politica-cookies.html" style="color:rgba(255,255,255,.7)">COOKIES</a> &nbsp;·&nbsp;
+          <a href="./terminos.html" style="color:rgba(255,255,255,.7)">TÉRMINOS</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./src/js/main.js"></script>
+</body>
+</html>

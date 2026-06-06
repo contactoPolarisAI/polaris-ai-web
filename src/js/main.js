@@ -46,26 +46,64 @@ document.addEventListener('DOMContentLoaded', () => {
   // Formularios y leads
   const demoForm = document.querySelector('form.demo-card');
   if (demoForm) {
-    demoForm.addEventListener('submit', (e) => {
+    demoForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       
-      const name = document.getElementById('f-name').value;
-      const empresa = document.getElementById('f-empresa').value;
-      const email = document.getElementById('f-email').value;
+      const nombre = document.getElementById('f-name').value.trim();
+      const empresa = document.getElementById('f-empresa').value.trim();
+      const email = document.getElementById('f-email').value.trim();
       const sector = document.getElementById('f-sector').value;
       const empleados = document.getElementById('f-empleados').value;
-
-      const messageText = `Hola Polaris AI, me gustaría solicitar una demo privada. 
-
-Mis datos:
-- Nombre: ${name}
-- Empresa: ${empresa}
-- Email: ${email}
-- Sector: ${sector}
-- Empleados: ${empleados}`;
-
-      // Redirigir a WhatsApp de forma automática
-      window.open(`https://wa.me/34602025877?text=${encodeURIComponent(messageText)}`, '_blank');
+      const consentChecked = document.getElementById('f-consent').checked;
+      
+      const statusEl = document.getElementById('demo-form-status');
+      const submitBtn = document.getElementById('btn-submit-demo');
+      
+      if (!consentChecked) {
+        if (statusEl) {
+          statusEl.style.color = '#E53E3E';
+          statusEl.textContent = 'Debe aceptar la Política de Privacidad para continuar.';
+          statusEl.style.display = 'block';
+        }
+        return;
+      }
+      
+      // Cambiar estado del botón a cargando
+      const originalBtnHtml = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviando...';
+      if (statusEl) statusEl.style.display = 'none';
+      
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ nombre, empresa, email, sector, empleados, consent: consentChecked })
+        });
+        
+        const data = await response.json();
+        
+        if (response.ok && data.ok) {
+          if (statusEl) {
+            statusEl.style.color = '#38A169';
+            statusEl.textContent = '¡Solicitud enviada con éxito! Nos pondremos en contacto contigo pronto.';
+            statusEl.style.display = 'block';
+          }
+          demoForm.reset();
+        } else {
+          throw new Error(data.error || 'Error en el servidor');
+        }
+      } catch (error) {
+        console.error('Error al enviar formulario:', error);
+        if (statusEl) {
+          statusEl.style.color = '#E53E3E';
+          statusEl.textContent = 'No se pudo enviar el mensaje. Por favor, inténtelo de nuevo o use WhatsApp.';
+          statusEl.style.display = 'block';
+        }
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHtml;
+      }
     });
   }
 });

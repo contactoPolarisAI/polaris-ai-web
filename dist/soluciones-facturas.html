@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Procesamiento Automático de Facturas y Contabilidad | Polaris AI</title>
+  <meta name="description" content="Automatiza la extracción de datos de facturas escaneadas y PDFs en tu gestoría o empresa con una IA local 100% segura y privada. Sin costes por uso.">
+  <link rel="icon" type="image/jpg" href="./logo.jpg">
+  <link rel="canonical" href="https://polaris-ai.es/soluciones-facturas.html">
+  <meta property="og:url" content="https://polaris-ai.es/soluciones-facturas.html">
+  <meta property="og:title" content="Procesamiento Automático de Facturas y Contabilidad | Polaris AI">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://polaris-ai.es/og-image.jpg">
+  <meta property="twitter:image" content="https://polaris-ai.es/og-image.jpg">
+  
+  <!-- Estilos compartidos -->
+  
+  <style>
+    .sector-content {
+      padding: 64px 0 96px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .sector-content h1 {
+      margin-bottom: 16px;
+      font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+      line-height: 1.15;
+    }
+    .sector-subtitle {
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      color: var(--fg-muted);
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 32px;
+      font-size: 0.94rem;
+      transition: color 0.2s ease;
+    }
+    .btn-back:hover {
+      color: var(--accent-2);
+    }
+    
+    /* Adaptar navbar simple */
+    .nav-simple {
+      border-bottom: 1px solid var(--border);
+      background: rgba(255,255,255,.8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    body.theme-dark .nav-simple {
+      background: rgba(11,27,54,.8);
+    }
+
+    /* Grid de características */
+    .sector-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin: 48px 0;
+    }
+    @media (max-width: 680px) {
+      .sector-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+    .sector-feat-card {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .sector-feat-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+    .sector-feat-card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--fg-muted);
+      margin: 0;
+    }
+
+    /* CTA Box */
+    .sector-cta-box {
+      background: var(--accent-soft);
+      border: 1px solid rgba(46,117,182,.2);
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+      margin-top: 56px;
+    }
+    .sector-cta-box h2 {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+      color: var(--accent);
+    }
+    .sector-cta-box p {
+      max-width: 600px;
+      margin: 0 auto 28px;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--fg-muted);
+    }
+  </style>
+
+  <!-- BreadcrumbList Schema (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://polaris-ai.es/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Soluciones",
+        "item": "https://polaris-ai.es/#como-funciona"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Procesamiento de Facturas",
+        "item": "https://polaris-ai.es/soluciones-facturas.html"
+      }
+    ]
+  }
+  </script>
+  <script type="module" crossorigin src="./assets/main-DvZlM-so.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-DXfmlSzc.css">
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav nav-simple" id="nav">
+    <div class="container nav-inner">
+      <a href="./index.html" class="brand" aria-label="Polaris AI inicio">
+        <span class="logo-mark"><img src="./logo.jpg" alt="Polaris AI Logo"></span>
+        <span class="brand-name">
+          <span class="name">Polaris AI</span>
+          <span class="tag">Agentic · Local · Private</span>
+        </span>
+      </a>
+      <div class="nav-cta">
+        <a href="./index.html" class="btn btn-secondary btn-sm">Volver al inicio</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ CONTENIDO SOLUCIÓN ============ -->
+  <main class="container">
+    <div class="sector-content">
+      <a href="./index.html" class="btn-back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Volver a la Home
+      </a>
+      
+      <span class="eyebrow" style="margin-bottom: 12px; display: inline-block;">// SOLUCIONES CORE</span>
+      <h1>Procesamiento automático de facturas</h1>
+      <p class="sector-subtitle">Extrae datos, concilia importes e integra la contabilidad de tu empresa de forma 100% automatizada con IA local que respeta la confidencialidad.</p>
+      
+      <h2>Elimina la transcripción manual de facturas y gastos</h2>
+      <p>El registro manual de facturas de proveedores es una de las tareas más mecánicas e ineficientes en los departamentos de administración y contabilidad. Además de consumir valiosas horas de trabajo, introduce de forma recurrente errores humanos que causan problemas en cierres fiscales y balances contables.</p>
+      
+      <p>Polaris AI automatiza este proceso de forma local y privada. Los albaranes, PDFs y facturas escaneadas son procesados directamente en tu propio servidor on-premise. La IA extrae de forma instantánea importes, tipos impositivos, retenciones e información de contacto sin subir nada a nubes externas.</p>
+
+      <div class="sector-grid">
+        <div class="sector-feat-card">
+          <h3>Extracción inteligente nativa</h3>
+          <p>Identifica y extrae con precisión del 99% el CIF del emisor, fecha, base imponible, cuotas de IVA, IRPF y total de la factura, adaptándose a múltiples diseños sin plantillas fijas.</p>
+        </div>
+        <div class="sector-feat-card">
+          <h3>Sincronización directa</h3>
+          <p>Convierte la información extraída a los formatos necesarios para la importación directa a tu ERP contable local (como Sage, A3, SAP u otros desarrollos a medida).</p>
+        </div>
+        <div class="sector-feat-card">
+          <h3>Seguridad absoluta de datos</h3>
+          <p>Ningún dato sale de tu red. Cumple de forma inmediata con las normas de confidencialidad y el secreto profesional ante auditorías RGPD.</p>
+        </div>
+        <div class="sector-feat-card">
+          <h3>Auditoría y control visual</h3>
+          <p>Permite una revisión previa rápida por parte del contable antes de la inserción final, facilitando un control total de la calidad de la contabilidad.</p>
+        </div>
+      </div>
+
+      <h2>Rendimiento reflexivo sin cargos de consumo</h2>
+      <p>A diferencia de las APIs tradicionales en la nube que cobran por factura procesada, el hardware de Polaris AI funciona bajo una cuota plana local ilimitada. Esto permite a tu empresa procesar decenas de miles de facturas y documentos al mes sin cargos adicionales de licenciamiento, rentabilizando tu inversión en muy poco tiempo.</p>
+
+      <div class="sector-cta-box">
+        <h2>¿Quieres ver cómo extrae tus facturas de prueba?</h2>
+        <p>Reserva una sesión técnica de 30 minutos. Trae tus propios archivos y te mostraremos en directo cómo procesamos la contabilidad en local de forma autónoma.</p>
+        <a href="https://wa.me/34602025877?text=Hola%20Polaris%20AI%2C%20me%20gustar%C3%ADa%20solicitar%20una%20demo%20de%20la%20soluci%C3%B3n%20de%20procesamiento%20de%20facturas." class="btn btn-primary" target="_blank">
+          Solicitar Demo de Facturación por WhatsApp
+          <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="background: var(--polaris-navy-deep); color: rgba(255,255,255,.7); padding: 48px 0 24px; font-size: 0.92rem;">
+    <div class="container">
+      <div class="footer-bottom" style="display:flex; justify-content:space-between; align-items:center; border-top: 1px solid rgba(255,255,255,.1); padding-top:22px; font-family:'JetBrains Mono', monospace; font-size:0.72rem; color: rgba(255,255,255,.45);">
+        <span>© 2026 POLARIS AI · TODOS LOS DERECHOS RESERVADOS</span>
+        <span>
+          <a href="./politica-privacidad.html" style="color:rgba(255,255,255,.7)">PRIVACIDAD</a> &nbsp;·&nbsp;
+          <a href="./politica-cookies.html" style="color:rgba(255,255,255,.7)">COOKIES</a> &nbsp;·&nbsp;
+          <a href="./terminos.html" style="color:rgba(255,255,255,.7)">TÉRMINOS</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
