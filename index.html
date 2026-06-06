@@ -32,12 +32,12 @@
   <meta property="twitter:image" content="https://polaris-ai.es/og-image.jpg">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/jpg" href="./logo.jpg">
+  <link rel="icon" type="image/webp" href="./logo.webp">
 
   <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
   <!-- Marcado Estructurado JSON-LD (SEO) -->
   <!-- Organization Schema (SEO/GEO) -->
@@ -47,7 +47,7 @@
     "@type": "Organization",
     "name": "Polaris AI",
     "url": "https://polaris-ai.es",
-    "logo": "https://polaris-ai.es/logo.jpg",
+    "logo": "https://polaris-ai.es/logo.webp",
     "telephone": "+34 602 02 58 77",
     "email": "contacto@polaris-ai.es",
     "areaServed": "ES",
@@ -66,7 +66,7 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Polaris AI",
-    "image": "https://polaris-ai.es/logo.jpg",
+    "image": "https://polaris-ai.es/logo.webp",
     "telephone": "+34 602 02 58 77",
     "email": "contacto@polaris-ai.es",
     "address": {
@@ -90,7 +90,7 @@
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Polaris AI",
-    "image": "https://polaris-ai.es/logo.jpg",
+    "image": "https://polaris-ai.es/logo.webp",
     "description": "IA agéntica local y privada instalada on-premise en tu empresa.",
     "offers": {
       "@type": "AggregateOffer",
@@ -191,8 +191,280 @@
 
   <!-- Script principal de Vite -->
   <script type="module" src="./src/js/main.js"></script>
+  <!-- Precarga de imagen LCP -->
+  <link rel="preload" as="image" href="./logo.webp" type="image/webp">
+
+  <style>
+    :root {
+      /* Fuentes */
+      --font-display: 'Space Grotesk', system-ui, sans-serif;
+      --font-body: 'Inter', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+
+      --polaris-navy:       #1B3A6B;
+      --polaris-navy-deep:  #0F2547;
+      --polaris-blue:       #2E75B6;
+      --polaris-blue-bright:#3B9AFF;
+      --polaris-light-blue: #D5E4F5;
+      --polaris-white:       #FFFFFF;
+      --polaris-gray-bg:     #F5F7FA;
+      --polaris-gray-border: #E2E8F0;
+      --polaris-text:        #1A1A2E;
+      --polaris-text-muted:  #4A5568;
+      --bg:          var(--polaris-white);
+      --bg-alt:      var(--polaris-gray-bg);
+      --fg:          var(--polaris-text);
+      --fg-muted:    var(--polaris-text-muted);
+      --border:      var(--polaris-gray-border);
+      --accent:      var(--polaris-navy);
+      --accent-2:    var(--polaris-blue);
+      --accent-soft: var(--polaris-light-blue);
+    }
+    body.theme-dark {
+      --bg:          #0B1B36;
+      --bg-alt:      #102447;
+      --fg:          #EAF2FC;
+      --fg-muted:    #9BB1CE;
+      --border:      rgba(255,255,255,.10);
+      --accent-soft: rgba(46,117,182,.14);
+    }
+
+    /* Base Typography */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--fg);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    html.intro-locked, html.intro-locked body { overflow: hidden; height: 100vh; }
+    html.intro-locked header.nav,
+    html.intro-locked main,
+    html.intro-locked footer {
+      display: none !important;
+    }
+
+    /* Intro Overlay */
+    #intro {
+      position: fixed; inset: 0;
+      z-index: 9999;
+      background-color: #f8fafc;
+      background-image: radial-gradient(rgba(46,117,182,0.08) 1.2px, transparent 1.2px);
+      background-size: 22px 22px;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      color: var(--polaris-text);
+      opacity: 1;
+      transition: opacity .7s ease;
+    }
+    #intro.fade-out { opacity: 0; pointer-events: none; }
+    #intro.hidden { display: none; }
+
+    .intro-landing {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+      max-width: 1200px;
+      width: 100%;
+      padding: 20px;
+      opacity: 0;
+      animation: introFadeContainer 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    @media (max-width: 860px) {
+      .intro-landing { flex-direction: column; text-align: center; gap: 40px; padding: 24px; }
+    }
+
+    .intro-logo {
+      position: relative;
+      width: 440px;
+      height: 440px;
+      display: flex; justify-content: center; align-items: center;
+      flex-shrink: 0;
+    }
+    @media (max-width: 480px) { .intro-logo { width: 300px; height: 300px; } }
+
+    .intro-logo .bg-arcs {
+      position: absolute;
+      width: 130%;
+      height: 130%;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .intro-disk {
+      position: absolute;
+      width: 290px;
+      height: 290px;
+      background: #ffffff;
+      border-radius: 50%;
+      box-shadow:
+        0 18px 50px rgba(27, 58, 107, 0.10),
+        0 2px 12px rgba(15, 37, 71, 0.04),
+        inset 0 0 0 1px rgba(46, 117, 182, 0.08);
+      z-index: 2;
+      display: flex; justify-content: center; align-items: center;
+      opacity: 0;
+      transform: scale(0.82);
+      animation:
+        introDiskEnter 2.2s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards,
+        introDiskPulse 5.5s ease-in-out 2.5s infinite alternate;
+    }
+    @media (max-width: 480px) { .intro-disk { width: 200px; height: 200px; } }
+
+    .intro-disk img {
+      width: 78%;
+      height: auto;
+      z-index: 3;
+      display: block;
+      user-select: none;
+      -webkit-user-drag: none;
+      opacity: 0;
+      transform: scale(0.92);
+      filter: blur(6px);
+      animation: introLogoEnter 2.4s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards;
+      border-radius: 50%;
+      mix-blend-mode: multiply;
+    }
+
+    .intro-text {
+      display: flex; flex-direction: column; justify-content: center;
+      opacity: 0;
+      transform: translateX(30px);
+      animation: introFadeText 1.8s cubic-bezier(0.22, 1, 0.36, 1) 1.6s forwards;
+    }
+    @media (max-width: 860px) {
+      .intro-text { transform: translateY(30px); animation: introFadeTextMobile 1.8s cubic-bezier(0.22, 1, 0.36, 1) 1.6s forwards; }
+    }
+
+    .intro-text > * {
+      opacity: 0;
+      transform: translateY(12px);
+      animation: introTextLine 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    .intro-text > .intro-title   { animation-delay: 1.8s; }
+    .intro-text > .intro-tagline { animation-delay: 2.1s; }
+    .intro-text > .intro-enter   { animation-delay: 2.4s; }
+
+    .intro-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5vw, 3.5rem);
+      font-weight: 700;
+      letter-spacing: 12px;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, #0F2547 45%, #2E75B6 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: #0F2547;
+      margin: 0 0 8px;
+      line-height: 1.05;
+    }
+    .intro-title .ai {
+      font-weight: 700;
+      color: #2E75B6;
+      -webkit-text-fill-color: #2E75B6;
+      text-shadow: 0 0 20px rgba(46, 117, 182, 0.18);
+    }
+
+    .intro-tagline {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 6px;
+      color: #4A5568;
+      text-transform: uppercase;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-top: 6px;
+      justify-content: flex-start;
+    }
+    @media (max-width: 860px) { .intro-tagline { justify-content: center; } }
+    .intro-tagline .sep { color: #2E75B6; font-size: 0.55rem; }
+
+    .intro-enter {
+      margin-top: 35px;
+      padding: 14px 32px;
+      background: transparent;
+      border: 2px solid #1B3A6B;
+      color: #1B3A6B;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      width: fit-content;
+      align-self: flex-start;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+    @media (max-width: 860px) { .intro-enter { align-self: center; } }
+    .intro-enter:hover {
+      background: #1B3A6B;
+      color: #ffffff;
+      box-shadow: 0 12px 28px -8px rgba(27, 58, 107, 0.45);
+      transform: translateY(-2px);
+    }
+    .intro-enter svg { transition: transform .25s ease; }
+    .intro-enter:hover svg { transform: translateX(4px); }
+
+    .intro-skip {
+      position: absolute;
+      top: 24px; right: 24px;
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,.6);
+      border: 1px solid rgba(46,117,182,.18);
+      color: #4A5568;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 8px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background .2s ease, color .2s ease, border-color .2s ease;
+      z-index: 5;
+      backdrop-filter: blur(8px);
+    }
+    .intro-skip:hover { background: #fff; color: #1B3A6B; border-color: rgba(46, 117, 182, 0.4); }
+    @media (max-width: 640px) {
+      .intro-skip { top: 14px; right: 14px; padding: 7px 12px; font-size: 0.62rem; }
+    }
+
+    /* Keyframes */
+    @keyframes introFadeContainer { to { opacity: 1; } }
+    @keyframes introDiskEnter { to { opacity: 1; transform: scale(1); } }
+    @keyframes introDiskPulse { 0% { transform: scale(0.985); } 100% { transform: scale(1.02); } }
+    @keyframes introLogoEnter { to { opacity: 1; transform: scale(1); filter: blur(0); } }
+    @keyframes introFadeText { to { opacity: 1; transform: translateX(0); } }
+    @keyframes introFadeTextMobile { to { opacity: 1; transform: translateY(0); } }
+    @keyframes introTextLine { to { opacity: 1; transform: translateY(0); } }
+  </style>
+  <!-- Estilos -->
+  <link rel="stylesheet" href="./src/styles/variables.css">
+  <link rel="stylesheet" href="./src/styles/base.css">
+  <link rel="stylesheet" href="./src/styles/components.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="./src/styles/layouts.css" media="print" onload="this.media='all'">
 </head>
 <body data-screen-label="Polaris AI — Home">
+  <!-- Sentinel de Scroll para evitar forced reflows en Navbar -->
+  <div id="scroll-sentinel" style="position: absolute; top: 0; left: 0; width: 1px; height: 6px; pointer-events: none; opacity: 0;" aria-hidden="true"></div>
 
 <!-- ============ INTRO LANDING ============ -->
 <div id="intro" role="dialog" aria-label="Polaris AI">
@@ -223,7 +495,7 @@
 
       <!-- Pod blanco con el logo del usuario -->
       <div class="intro-disk">
-        <img src="./logo.jpg" alt="Polaris AI Logo">
+        <img src="./logo.webp" alt="Polaris AI Logo" width="1024" height="1024">
       </div>
     </div>
 
@@ -245,7 +517,7 @@
 <header class="nav" id="nav">
   <div class="container nav-inner">
     <a href="#" class="brand" aria-label="Polaris AI inicio">
-      <span class="logo-mark"><img src="./logo.jpg" alt="Polaris AI Logo"></span>
+      <span class="logo-mark"><img src="./logo.webp" alt="Polaris AI Logo" width="1024" height="1024"></span>
       <span class="brand-name">
         <span class="name">Polaris AI</span>
         <span class="tag">Agentic · Local · Private</span>
@@ -329,7 +601,7 @@
           </div>
 
           <div class="isotype">
-            <img src="./logo.jpg" alt="Polaris AI Logo Mark">
+            <img src="./logo.webp" alt="Polaris AI Logo Mark" width="1024" height="1024">
           </div>
         </div>
       </div>
@@ -1088,19 +1360,19 @@
         <div class="chart-card reveal">
           <h3 class="chart-title">Tiempo por tarea (horas/semana)</h3>
           <p class="chart-sub">Antes vs Después de implementar Polaris AI</p>
-          <div class="chart-canvas-wrap"><canvas id="chart-bars"></canvas></div>
+          <div class="chart-canvas-wrap"><canvas id="chart-bars" width="533" height="220" style="aspect-ratio: 533/220; width: 100%; height: auto; display: block;"></canvas></div>
         </div>
         <div class="chart-card reveal" data-delay="1">
           <h3 class="chart-title">Evolución del ahorro de tiempo (%)</h3>
           <p class="chart-sub">Primeros 6 meses tras implantación</p>
-          <div class="chart-canvas-wrap"><canvas id="chart-line"></canvas></div>
+          <div class="chart-canvas-wrap"><canvas id="chart-line" width="533" height="220" style="aspect-ratio: 533/220; width: 100%; height: auto; display: block;"></canvas></div>
         </div>
         <div class="chart-card reveal">
           <h3 class="chart-title">Distribución del tiempo ahorrado</h3>
           <p class="chart-sub">Por área de actividad (% del total)</p>
           <div class="donut-wrap">
             <div class="donut-center">
-              <canvas id="chart-donut" width="200" height="200"></canvas>
+              <canvas id="chart-donut" width="200" height="200" style="aspect-ratio: 1/1; width: 100%; max-width: 200px; height: auto; display: block;"></canvas>
               <div class="donut-num"><div><strong>73%</strong><span>Ahorro</span></div></div>
             </div>
             <ul class="donut-legend" id="donut-legend">
@@ -1111,7 +1383,7 @@
         <div class="chart-card reveal" data-delay="1">
           <h3 class="chart-title">Polaris AI vs Alternativas</h3>
           <p class="chart-sub">Puntuación por criterio clave para PYMEs (0–100)</p>
-          <div class="chart-canvas-wrap" style="min-height: 260px;"><canvas id="chart-hbars"></canvas></div>
+          <div class="chart-canvas-wrap" style="min-height: 260px;"><canvas id="chart-hbars" width="533" height="260" style="aspect-ratio: 533/260; width: 100%; height: auto; display: block;"></canvas></div>
           <div style="margin-top: 12px; display:flex; gap:18px; flex-wrap:wrap; font-family:'JetBrains Mono', monospace; font-size:.72rem; color:var(--fg-muted);">
             <span><span style="display:inline-block;width:10px;height:10px;background:#1B3A6B;border-radius:2px;vertical-align:middle;margin-right:6px;"></span>Polaris AI</span>
             <span><span style="display:inline-block;width:10px;height:10px;background:#94A0B6;border-radius:2px;vertical-align:middle;margin-right:6px;"></span>Copilot 365</span>
@@ -1517,7 +1789,7 @@
     <div class="footer-grid">
       <div>
         <div class="brand">
-          <span class="logo-mark"><img src="./logo.jpg" alt="Polaris AI Logo Mark"></span>
+          <span class="logo-mark"><img src="./logo.webp" alt="Polaris AI Logo Mark" width="1024" height="1024"></span>
           <span class="brand-name">
             <span class="name">Polaris AI</span>
             <span class="tag">Agentic · Local · Private · Trusted</span>

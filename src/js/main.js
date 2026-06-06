@@ -1,37 +1,49 @@
-// Importar hojas de estilo para que Vite las procese y empaquete
-import '../styles/variables.css';
-import '../styles/base.css';
-import '../styles/components.css';
-import '../styles/layouts.css';
-
 // Importar submódulos de JavaScript
 import { ThemeManager } from './theme.js';
 import { AnimationManager } from './animations.js';
 import { RoiCalculator } from './calculator.js';
-import { ChartManager } from './charts.js';
 import { SliderManager } from './slider.js';
 import { CookieManager } from './cookies.js';
-
-import { injectSpeedInsights } from '@vercel/speed-insights';
-import { inject } from '@vercel/analytics';
-
-inject();
-
-injectSpeedInsights();
 
 document.addEventListener('DOMContentLoaded', () => {
   // Inicializar gestores
   ThemeManager.init();
   AnimationManager.init();
   RoiCalculator.init();
-  ChartManager.init();
   SliderManager.init();
   CookieManager.init();
 
-  // navbar scroll behavior
+  // Lazy load Chart.js only on pages that have charts
+  if (document.querySelector('canvas[id^="chart-"]')) {
+    import('./charts.js').then(({ ChartManager }) => {
+      ChartManager.init();
+    });
+  }
+
+  // Defer Vercel Analytics and Speed Insights to avoid blocking the main thread
+  setTimeout(() => {
+    import('@vercel/analytics').then(({ inject }) => inject());
+    import('@vercel/speed-insights').then(({ injectSpeedInsights }) => injectSpeedInsights());
+  }, 1000);
+
+  // navbar scroll behavior using IntersectionObserver
   const nav = document.getElementById('nav');
-  if (nav) {
-    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 6);
+  const sentinel = document.getElementById('scroll-sentinel');
+  if (nav && sentinel && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      requestAnimationFrame(() => {
+        nav.classList.toggle('scrolled', !entry.isIntersecting);
+      });
+    });
+    observer.observe(sentinel);
+  } else if (nav) {
+    // Fallback for older browsers
+    const onScroll = () => {
+      requestAnimationFrame(() => {
+        nav.classList.toggle('scrolled', window.scrollY > 6);
+      });
+    };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
   }

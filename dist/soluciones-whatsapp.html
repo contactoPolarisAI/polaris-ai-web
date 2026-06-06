@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Automatización de WhatsApp y Pedidos | Polaris AI</title>
   <meta name="description" content="Atiende a tus clientes, agenda citas y recibe pedidos por WhatsApp sincronizando la información automáticamente con tu ERP local de forma privada.">
-  <link rel="icon" type="image/jpg" href="./logo.jpg">
+  <link rel="icon" type="image/webp" href="./logo.webp">
   <link rel="canonical" href="https://polaris-ai.es/soluciones-whatsapp.html">
   <meta property="og:url" content="https://polaris-ai.es/soluciones-whatsapp.html">
   <meta property="og:title" content="Automatización de WhatsApp y Pedidos | Polaris AI">
@@ -13,7 +13,14 @@
   <meta property="og:image" content="https://polaris-ai.es/og-image.jpg">
   <meta property="twitter:image" content="https://polaris-ai.es/og-image.jpg">
   
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
   <!-- Estilos compartidos -->
+  <link rel="stylesheet" href="./assets/components-BzJLoixi.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="./assets/layouts-Cz28bGdr.css" media="print" onload="this.media='all'">
   
   <style>
     .sector-content {
@@ -138,16 +145,20 @@
     ]
   }
   </script>
-  <script type="module" crossorigin src="./assets/main-DvZlM-so.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/main-DXfmlSzc.css">
+  <!-- Precarga de imagen LCP -->
+  <link rel="preload" as="image" href="./logo.webp" type="image/webp">
+  <script type="module" crossorigin src="./assets/base-C-EzNsUt.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/base-CfZKO9eA.css">
 </head>
 <body>
+  <!-- Sentinel de Scroll para evitar forced reflows en Navbar -->
+  <div id="scroll-sentinel" style="position: absolute; top: 0; left: 0; width: 1px; height: 6px; pointer-events: none; opacity: 0;" aria-hidden="true"></div>
 
   <!-- ============ NAVBAR ============ -->
   <header class="nav nav-simple" id="nav">
     <div class="container nav-inner">
       <a href="./index.html" class="brand" aria-label="Polaris AI inicio">
-        <span class="logo-mark"><img src="./logo.jpg" alt="Polaris AI Logo"></span>
+        <span class="logo-mark"><img src="./logo.webp" alt="Polaris AI Logo" width="1024" height="1024"></span>
         <span class="brand-name">
           <span class="name">Polaris AI</span>
           <span class="tag">Agentic · Local · Private</span>

@@ -3,10 +3,32 @@ import Chart from 'chart.js/auto';
 export const ChartManager = {
   init() {
     this.initDefaultConfig();
-    this.initBarsChart();
-    this.initLineChart();
-    this.initDonutChart();
-    this.initHorizontalBarsChart();
+
+    const observeChart = (id, initFn) => {
+      const canvas = document.getElementById(id);
+      if (!canvas) return;
+
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              requestAnimationFrame(() => {
+                initFn.call(this);
+              });
+              observer.unobserve(canvas);
+            }
+          });
+        }, { rootMargin: '100px' });
+        observer.observe(canvas);
+      } else {
+        initFn.call(this);
+      }
+    };
+
+    observeChart('chart-bars', this.initBarsChart);
+    observeChart('chart-line', this.initLineChart);
+    observeChart('chart-donut', this.initDonutChart);
+    observeChart('chart-hbars', this.initHorizontalBarsChart);
   },
 
   initDefaultConfig() {

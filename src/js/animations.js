@@ -38,70 +38,29 @@ export const AnimationManager = {
     const revealEls = document.querySelectorAll('.reveal');
     const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    if (reduceMotion || !('IntersectionObserver' in window)) {
-      // Si se prefiere movimiento reducido o no hay soporte, todo se muestra inmediatamente
+    if (reduceMotion) {
       revealEls.forEach(el => el.classList.add('in'));
       return;
     }
 
-    const enableRevealAnimation = () => {
+    if ('IntersectionObserver' in window) {
       document.documentElement.classList.add('js-reveal');
 
       const io = new IntersectionObserver((entries) => {
         entries.forEach(e => {
           if (e.isIntersecting) {
-            e.target.classList.add('in');
+            requestAnimationFrame(() => {
+              e.target.classList.add('in');
+            });
             io.unobserve(e.target);
           }
         });
       }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
       revealEls.forEach(el => io.observe(el));
-
-      // Respaldo en scroll directo
-      const h = () => window.innerHeight || document.documentElement.clientHeight;
-      let scheduled = false;
-      const tick = () => {
-        scheduled = false;
-        const vh = h();
-        revealEls.forEach(el => {
-          if (el.classList.contains('in')) return;
-          const r = el.getBoundingClientRect();
-          if (r.top < vh - 20 && r.bottom > 0) el.classList.add('in');
-        });
-      };
-      const onScrollReveal = () => {
-        if (!scheduled) {
-          scheduled = true;
-          requestAnimationFrame(tick);
-        }
-      };
-      window.addEventListener('scroll', onScrollReveal, { passive: true });
-      window.addEventListener('resize', onScrollReveal);
-      tick();
-    };
-
-    // Sensor de prueba para verificar si el IntersectionObserver se dispara correctamente en este entorno
-    const sentinel = document.createElement('div');
-    sentinel.style.cssText = 'position:fixed;top:0;left:0;width:1px;height:1px;pointer-events:none;opacity:0;';
-    document.body.appendChild(sentinel);
-    let ioWorks = false;
-    const probe = new IntersectionObserver((entries) => {
-      if (entries.some(e => e.isIntersecting)) {
-        ioWorks = true;
-        probe.disconnect();
-        sentinel.remove();
-        enableRevealAnimation();
-      }
-    });
-    probe.observe(sentinel);
-    setTimeout(() => {
-      if (!ioWorks) {
-        probe.disconnect();
-        sentinel.remove();
-        // Fallback: mostrar todo de inmediato si falla el probe
-        revealEls.forEach(el => el.classList.add('in'));
-      }
-    }, 150);
+    } else {
+      // Fallback para navegadores antiguos
+      revealEls.forEach(el => el.classList.add('in'));
+    }
   },
 
   /* === Animated counters === */
