@@ -1,15 +1,10 @@
 {
   "redirects": [
     {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.polaris-ai.es"
-        }
-      ],
-      "destination": "https://polaris-ai.es/:path*",
-      "statusCode": 301
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.polaris-ai.es" }],
+      "destination": "https://polaris-ai.es/$1",
+      "permanent": true
     }
   ]
 }
