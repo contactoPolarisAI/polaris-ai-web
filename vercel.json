@@ -1,10 +1,4 @@
 {
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "has": [{ "type": "host", "value": "www.polaris-ai.es" }],
-      "destination": "https://polaris-ai.es/$1",
-      "permanent": true
-    }
-  ]
+  "cleanUrls": false,
+  "trailingSlash": false
 }
