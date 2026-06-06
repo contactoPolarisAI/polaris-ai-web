@@ -12,6 +12,12 @@ import { ChartManager } from './charts.js';
 import { SliderManager } from './slider.js';
 import { CookieManager } from './cookies.js';
 
+// Importar Vercel Speed Insights
+import { injectSpeedInsights } from '@vercel/speed-insights';
+
+// Inicializar Speed Insights
+injectSpeedInsights();
+
 document.addEventListener('DOMContentLoaded', () => {
   // Inicializar gestores
   ThemeManager.init();
