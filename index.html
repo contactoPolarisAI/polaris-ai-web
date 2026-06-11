@@ -3,6 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function() {
+      var consent = localStorage.getItem('polaris_cookie_consent');
+      if (consent === null) {
+        document.documentElement.classList.add('intro-deferred');
+      } else {
+        document.documentElement.classList.add('intro-skipped');
+      }
+    })();
+  </script>
   
   <!-- SEO General -->
   <title>Polaris AI — IA empresarial local y privada para PYMEs</title>
@@ -266,6 +276,7 @@
     }
     #intro.fade-out { opacity: 0; pointer-events: none; }
     #intro.hidden { display: none; }
+    html.intro-deferred #intro, html.intro-skipped #intro { display: none !important; }
 
     .intro-landing {
       position: relative;
@@ -291,6 +302,7 @@
       height: 440px;
       display: flex; justify-content: center; align-items: center;
       flex-shrink: 0;
+      overflow: hidden;
     }
     @media (max-width: 480px) { .intro-logo { width: 300px; height: 300px; } }
 
@@ -435,7 +447,8 @@
       font-size: 0.68rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      padding: 8px 14px;
+      padding: 8px 16px;
+      min-height: 44px;
       border-radius: 999px;
       cursor: pointer;
       transition: background .2s ease, color .2s ease, border-color .2s ease;
@@ -444,7 +457,7 @@
     }
     .intro-skip:hover { background: #fff; color: #1B3A6B; border-color: rgba(46, 117, 182, 0.4); }
     @media (max-width: 640px) {
-      .intro-skip { top: 14px; right: 14px; padding: 7px 12px; font-size: 0.62rem; }
+      .intro-skip { top: 14px; right: 14px; padding: 8px 16px; min-height: 44px; font-size: 0.62rem; }
     }
 
     /* Keyframes */
@@ -535,9 +548,33 @@
     </nav>
     <div class="nav-cta">
       <a href="https://wa.me/34602025877?text=Hola%20Polaris%20AI%2C%20me%20gustar%C3%ADa%20solicitar%20una%20demo%20gratuita." class="btn btn-primary btn-sm" target="_blank">
-        Solicitar demo
+        <span class="cta-text-desktop">Solicitar </span>demo
         <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
       </a>
+    </div>
+    
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu-mobile" id="nav-toggle">
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+    </button>
+  </div>
+  
+  <div class="nav-menu-mobile" id="nav-menu-mobile" role="dialog" aria-modal="true" aria-label="Menú de navegación móvil">
+    <div class="nav-menu-mobile-inner" style="display: flex; flex-direction: column; height: 100%;">
+      <ul class="nav-menu-mobile-links">
+        <li><a href="#que-es">¿Qué es?</a></li>
+        <li><a href="#como-funciona">Cómo funciona</a></li>
+        <li><a href="#sectores">Sectores</a></li>
+        <li><a href="#perfiles">Casos reales</a></li>
+        <li><a href="#precios">Precios</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <div class="nav-menu-mobile-cta">
+        <a href="https://wa.me/34602025877?text=Hola%20Polaris%20AI%2C%20me%20gustar%C3%ADa%20solicitar%20una%20demo%20gratuita." class="btn btn-primary" target="_blank">
+          Solicitar demo
+        </a>
+      </div>
     </div>
   </div>
 </header>
@@ -1689,16 +1726,16 @@
           <div class="field-row">
             <div class="field">
               <label for="f-name">Nombre</label>
-              <input id="f-name" type="text" placeholder="María García" required>
+              <input id="f-name" type="text" placeholder="María García" autocomplete="name" required>
             </div>
             <div class="field">
               <label for="f-empresa">Empresa</label>
-              <input id="f-empresa" type="text" placeholder="Asesoría García SL" required>
+              <input id="f-empresa" type="text" placeholder="Asesoría García SL" autocomplete="organization" required>
             </div>
           </div>
           <div class="field">
             <label for="f-email">Email corporativo</label>
-            <input id="f-email" type="email" placeholder="maria@asesoria-garcia.es" required>
+            <input id="f-email" type="email" placeholder="maria@asesoria-garcia.es" autocomplete="email" required>
           </div>
           <div class="field-row">
             <div class="field">

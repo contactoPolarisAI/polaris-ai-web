@@ -48,6 +48,82 @@ document.addEventListener('DOMContentLoaded', () => {
     onScroll();
   }
 
+  // Mobile menu toggle logic
+  const toggleBtn = document.getElementById('nav-toggle');
+  const mobileMenu = document.getElementById('nav-menu-mobile');
+  
+  if (toggleBtn && mobileMenu) {
+    const focusableElements = mobileMenu.querySelectorAll('a, button');
+    const firstFocusable = focusableElements[0];
+    const lastFocusable = focusableElements[focusableElements.length - 1];
+
+    const openMenu = () => {
+      mobileMenu.style.display = 'flex';
+      // Force reflow
+      mobileMenu.offsetHeight;
+      toggleBtn.setAttribute('aria-expanded', 'true');
+      mobileMenu.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => firstFocusable?.focus(), 100);
+    };
+
+    const closeMenu = () => {
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+      toggleBtn.focus();
+      setTimeout(() => {
+        if (!mobileMenu.classList.contains('open')) {
+          mobileMenu.style.display = 'none';
+        }
+      }, 400);
+    };
+
+    toggleBtn.addEventListener('click', () => {
+      const isOpen = toggleBtn.getAttribute('aria-expanded') === 'true';
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    mobileMenu.addEventListener('click', (e) => {
+      if (e.target === mobileMenu) {
+        closeMenu();
+      }
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        closeMenu();
+      });
+    });
+
+    document.addEventListener('keydown', (e) => {
+      const isOpen = toggleBtn.getAttribute('aria-expanded') === 'true';
+      if (!isOpen) return;
+
+      if (e.key === 'Escape') {
+        closeMenu();
+      }
+
+      if (e.key === 'Tab') {
+        if (e.shiftKey) {
+          if (document.activeElement === firstFocusable) {
+            e.preventDefault();
+            lastFocusable?.focus();
+          }
+        } else {
+          if (document.activeElement === lastFocusable) {
+            e.preventDefault();
+            firstFocusable?.focus();
+          }
+        }
+      }
+    });
+  }
+
   // FAQ accordion
   document.querySelectorAll('.faq-q').forEach(btn => {
     btn.addEventListener('click', () => {

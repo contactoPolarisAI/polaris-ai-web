@@ -12,7 +12,13 @@ export const AnimationManager = {
     const skip    = document.getElementById('intro-skip');
     if (!overlay) return;
 
-    document.documentElement.classList.add('intro-locked');
+    // Only lock the scroll if we are not skipping or deferring the intro
+    const isDeferred = document.documentElement.classList.contains('intro-deferred');
+    const isSkipped = document.documentElement.classList.contains('intro-skipped');
+    
+    if (!isDeferred && !isSkipped) {
+      document.documentElement.classList.add('intro-locked');
+    }
 
     const dismiss = () => {
       overlay.classList.add('fade-out');
@@ -24,7 +30,7 @@ export const AnimationManager = {
     skip  && skip.addEventListener('click', dismiss);
 
     const onKey = (e) => {
-      if (overlay.classList.contains('hidden')) return;
+      if (overlay.classList.contains('hidden') || document.documentElement.classList.contains('intro-deferred') || document.documentElement.classList.contains('intro-skipped')) return;
       if (e.key === 'Escape' || e.key === ' ' || e.key === 'Enter') {
         e.preventDefault();
         dismiss();

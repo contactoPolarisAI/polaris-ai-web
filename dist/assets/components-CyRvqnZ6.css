@@ -1,4 +1,10 @@
 /* ============ Buttons ============ */
+.btn-back {
+  display: inline-flex !important;
+  align-items: center !important;
+  min-height: 44px !important;
+  padding-block: 10px !important;
+}
 .btn {
   display: inline-flex;
   align-items: center;
@@ -12,7 +18,7 @@
   transition: transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease, color .2s ease;
   white-space: nowrap;
 }
-.btn-sm { padding: 10px 16px; font-size: 0.875rem; }
+.btn-sm { padding: 10px 16px; font-size: 0.875rem; min-height: 44px; display: inline-flex; align-items: center; }
 .btn-primary {
   background: var(--accent);
   color: #fff;
@@ -1285,7 +1291,7 @@ body.theme-dark .plan.popular { background: linear-gradient(180deg, var(--bg-alt
   color: #fff;
   border-radius: 8px;
   padding: 11px 14px;
-  font: inherit; font-size: 0.92rem;
+  font: inherit; font-size: 16px;
   outline: none;
   transition: border-color .15s ease;
 }
@@ -1377,6 +1383,7 @@ body.theme-dark .plan.popular { background: linear-gradient(180deg, var(--bg-alt
 }
 #intro.fade-out { opacity: 0; pointer-events: none; }
 #intro.hidden { display: none; }
+html.intro-deferred #intro, html.intro-skipped #intro { display: none !important; }
 html.intro-locked, html.intro-locked body { overflow: hidden; height: 100vh; }
 
 .intro-landing {
@@ -1538,7 +1545,7 @@ html.intro-locked, html.intro-locked body { overflow: hidden; height: 100vh; }
 .intro-skip {
   position: absolute;
   top: 24px; right: 24px;
-  display: inline-flex; align-items: center; gap: 8px;
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   background: rgba(255,255,255,.6);
   border: 1px solid rgba(46,117,182,.18);
   color: #4A5568;
@@ -1546,7 +1553,8 @@ html.intro-locked, html.intro-locked body { overflow: hidden; height: 100vh; }
   font-size: 0.68rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  padding: 8px 14px;
+  padding: 8px 16px;
+  min-height: 44px;
   border-radius: 999px;
   cursor: pointer;
   transition: background .2s ease, color .2s ease, border-color .2s ease;
@@ -1555,7 +1563,7 @@ html.intro-locked, html.intro-locked body { overflow: hidden; height: 100vh; }
 }
 .intro-skip:hover { background: #fff; color: #1B3A6B; border-color: rgba(46,117,182,.4); }
 @media (max-width: 640px) {
-  .intro-skip { top: 14px; right: 14px; padding: 7px 12px; font-size: 0.62rem; }
+  .intro-skip { top: 14px; right: 14px; padding: 8px 16px; min-height: 44px; font-size: 0.62rem; }
 }
 
 /* ============ Floating WhatsApp Button ============ */
@@ -1583,6 +1591,16 @@ html.intro-locked, html.intro-locked body { overflow: hidden; height: 100vh; }
   width: 28px;
   height: 28px;
   fill: currentColor;
+}
+@media (max-width: 600px) {
+  .whatsapp-float {
+    bottom: 20px;
+    left: 20px;
+    transition: bottom 0.3s ease, transform 0.25s ease;
+  }
+  body.cookie-banner-active .whatsapp-float {
+    bottom: 156px;
+  }
 }
 
 /* ============ Carousel Slider ============ */
@@ -1738,6 +1756,10 @@ body.theme-dark .carousel-nav-btn:hover {
 }
 
 .cookie-buttons button {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 8px 16px;
   font-size: 0.82rem;
   border-radius: var(--radius-md);
@@ -1759,5 +1781,21 @@ body.theme-dark .cookie-banner {
     width: calc(100% - 32px);
     max-width: none;
     padding: 16px 20px;
+  }
+  .sector-cta-box .btn-primary,
+  .roi-cta,
+  .demo-card .submit {
+    white-space: normal !important;
+    width: 100% !important;
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+  }
+  .demo-card .field-row {
+    grid-template-columns: 1fr !important;
+  }
+  .compare-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
   }
 }
